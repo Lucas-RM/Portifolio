@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portifólio - Lucas Marcondes | Home</title>
+    <title>Portifólio - Lucas R. Marcondes | Home</title>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link href="fontawesome/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/9a60141a67.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- CABEÇALHO -->
@@ -17,7 +17,13 @@
         <div class="container">
             <h1 class="cabecalhoPrincipal-titulo"><a href="#">lucas r. marcondes</a></h1>
 
-            <nav>
+            <nav class="cabecalhoPrincipal-nav" role="menu">
+                <div class="divBotaoMenu">
+                    <button id="mobile-menu" aria-haspopup="true" aria-controls="cabecalhoPrincipal-nav-ul" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
                 <ul class="cabecalhoPrincipal-nav-ul">
                     <li class="cabecalhoPrincipal-nav-ul-itens"><a href="index.html">home</a></li>
                     <li class="cabecalhoPrincipal-nav-ul-itens"><a href="#" id="linkSobreMim">sobre mim</a></li>
@@ -36,27 +42,38 @@
         </div>
     </header>
 
-    <main class="conteudoPrincipal">
+    <section class="section-sobreMim visible">
         <div class="fundoDesfocado"></div>
 
-        <section class="conteudoPrincipal_SobreMim">
-            <div class="container-buttonFechar">
-                <button class="botaoFechar"><i class="fa-solid fa-xmark"></i></button>                     
+        <div class="container">
+            <div class="section-sobreMim-divBotaoFechar">
+                <button class="botaoFechar" id="botaoFechar" aria-haspopup="true" aria-controls="section-sobreMim-container">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
 
-            <div class="container animationFadeIn">
-                <article class="conteudoPrincipal_SobreMim-article">
-                    <img src="img/Foto - Lucas.jpg" alt="Foto-Lucas" class="conteudoPrincipal_SobreMim-foto">
+            <div class="section-sobreMim-container" role="SectionSobreMim">
+                <article class="section-sobreMim-article">
+                    <img src="img/Foto - Lucas.jpg" alt="Foto-Lucas" class="section-sobreMim-foto">
                     <h1>Olá, sou Lucas.</h1>
-                    <p class="conteudoPrincipal_SobreMim-descricao">Tenho 18 anos e pretendo seguir a carreira como <b>Desenvolvedor BackEnd</b>, porém não é que eu não goste de FrontEnd, pelo contrário, eu tenho até um hobby que é fazer <u>desenhos digitais</u> que está relacionado a parte de FrontEnd também. Mas o que eu gosto mais é da parte de cálculos matemáticos, de lógica, a parte de dentro do programa, então, por causa disso que resolvi escolher ser Desenvolvedor BackEnd.</p>
 
-                    <p class="conteudoPrincipal_SobreMim-descricao">Atualmente, estou iniciando a graduação de <b>Ciências da Computação</b> na faculdade <b><a href="https://www.unip.br/">UNIP (Universidade Paulista)</a></b> e realizando os cursos disponibilizados pelo programa Desenvolve do Grupo Oboticário em conjunto com a plataforma Alura. Além disso, já sou formado em Técnico de Informárica (2016 - 2020) no <b><a href="https://ceappedreira.org.br/">CEAP (Centro Educacional Assistencial Proficionalizante)</a></b> onde eu tive a chance de participar de feiras de ciências, realizar vários cursos e fazer alguns projetos.</p>
+                    <p class="section-sobreMim-descricao">
+                        Tenho 18 anos e pretendo seguir a carreira como <b>Desenvolvedor BackEnd</b>, porém não é que eu não goste de FrontEnd, pelo contrário, eu tenho até um hobby que é fazer <u>desenhos digitais</u> que está relacionado a parte de FrontEnd também. Mas o que eu gosto mais é da parte de cálculos, da lógica, então, por causa disso que resolvi escolher ser Desenvolvedor BackEnd.
+                    </p>
 
-                    <p class="conteudoPrincipal_SobreMim-descricao">E é assim que pretendo conseguir uma primeira oportunidade de trabalhar nessa área.</p>
+                    <p class="section-sobreMim-descricao">
+                        Atualmente, estou iniciando a graduação de <b>Ciências da Computação</b> na faculdade <b><a href="https://www.unip.br/">UNIP (Universidade Paulista)</a></b> e realizando os cursos disponibilizados pelo programa Desenvolve do Grupo Oboticário em conjunto com a plataforma Alura. Além disso, já sou formado em Técnico de Informárica (2016 - 2020) no <b><a href="https://ceappedreira.org.br/">CEAP (Centro Educacional Assistencial Profissionalizante)</a></b> onde eu tive a chance de participar de feiras de ciências, realizar vários cursos e fazer alguns projetos.
+                    </p>
+
+                    <p class="section-sobreMim-descricao">
+                        E é assim que pretendo conseguir uma primeira oportunidade de trabalhar nessa área.
+                    </p>
                 </article>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <main class="conteudoPrincipal">
         <section class="conteudoPrincipal_Projetos">
             <h2 class="subtitulo">Meus Projetos</h2>
             <div class="container"></div>
