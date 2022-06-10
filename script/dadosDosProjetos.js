@@ -24,9 +24,15 @@ const projetos = [
         descricao: 'Projeto acadêmico feito em curso com objetivo de aplicar <b>posicionamento do conteúdo</b> do site e deixar o site <b>responsivo</b>, sendo compatível para celular, computador, ipads, entre outros dispositivos.'
     },
     {
-        link: 'https://lucas-rm.github.io/Projeto-Relogio/',
+        link: 'https://lucas-rm.github.io/relogio-online/',
         img: './img/Projeto-Relogio.png',
         titulo: 'projeto relógio',
         descricao: 'Projeto com intuito de representar um relógio em um site.'
+    },
+    {
+        link: 'https://lucas-rm.github.io/pesquisa_inclusao_digital/',
+        img: './img/Projeto-InclusaoDigital.png',
+        titulo: 'projeto inclusão digital',
+        descricao: 'Projeto acadêmico realizado em grupo na faculdade com a finalidade de compreender o processo de <b>Inclusão Digital</b> na sociedade.'
     }
 ];
