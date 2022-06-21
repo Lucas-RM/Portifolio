@@ -32,7 +32,7 @@ $linkSobreMim.addEventListener('click', () => {
     $fundoDesfocado.style.display = 'block'
     $visible[1].classList.toggle('visible')
     $pageScroll.style.overflow = 'hidden'
-    mudaTitle('Portifólio - Lucas R. Marcondes | Sobre Mim')
+    mudaTitle('Lucas R. Marcondes | Sobre Mim')
 })
 
 $botaoFechar.addEventListener('click', () => {
