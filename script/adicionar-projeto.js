@@ -1,4 +1,4 @@
-const containerProjeto = document.querySelector('.conteudoPrincipal_Projetos .container')
+const containerProjeto = document.querySelector('.conteudoPrincipal_Section .container')
 
 for (let i = 0; i < projetos.length; i++) {
     const div_postProjeto = document.createElement('div');
@@ -8,10 +8,10 @@ for (let i = 0; i < projetos.length; i++) {
     const h3 = document.createElement('h3');
     const p = document.createElement('p');
 
-    div_postProjeto.classList.add('conteudoPrincipal_Projetos-postProjetos');
-    img.classList.add('conteudoPrincipal_Projetos-img');
-    div_descricao.classList.add('conteudoPrincipal_Projetos-descricao');
-    h3.classList.add('conteudoPrincipal_Projetos-titulo');
+    div_postProjeto.classList.add('conteudoPrincipal_Section-postProjetos');
+    img.classList.add('conteudoPrincipal_Section-img');
+    div_descricao.classList.add('conteudoPrincipal_Section-descricao');
+    h3.classList.add('conteudoPrincipal_Section-titulo');
 
     a.href = projetos[i].link;
     img.src = projetos[i].img;
