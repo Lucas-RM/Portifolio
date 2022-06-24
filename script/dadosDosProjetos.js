@@ -34,5 +34,11 @@ const projetos = [
         img: './img/Projeto-InclusaoDigital.png',
         titulo: 'projeto inclusão digital',
         descricao: 'Projeto acadêmico realizado em grupo na faculdade com a finalidade de compreender o processo de <b>Inclusão Digital</b> na sociedade.'
+    },
+    {
+        link: 'https://lucas-rm.github.io/alura-store/',
+        img: './img/alura-store.png',
+        titulo: 'alura store',
+        descricao: 'Site feito em curso da plataforma Alura com o objetivo de aprender sobre CSS Grid e a simplicação de layouts.'
     }
 ];
