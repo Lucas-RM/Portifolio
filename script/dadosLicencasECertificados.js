@@ -1,6 +1,24 @@
 const licencasECertificadosDados = [
     {
         img: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEkPb_YckN8NQ/company-logo_200_200/0/1655315590765?e=1663804800&v=beta&t=byqFDxU2X4jnUEIu6ogivVZ1Qi5Bu6HWJi84ko9aAWs',
+        titulo: 'CSS Grid: simplificando layouts',
+        paragrafo: [
+            'Alura',
+            'Emitido em jun de 2022 · Sem data de expiração'
+        ],
+        link: 'https://cursos.alura.com.br/certificate/4284a8c6-33bc-4757-8d02-c70f1420e6b3'
+    },
+    {
+        img: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEkPb_YckN8NQ/company-logo_200_200/0/1655315590765?e=1663804800&v=beta&t=byqFDxU2X4jnUEIu6ogivVZ1Qi5Bu6HWJi84ko9aAWs',
+        titulo: 'Comunicação não violenta parte 2: mantendo a empatia',
+        paragrafo: [
+            'Alura',
+            'Emitido em jun de 2022 · Sem data de expiração'
+        ],
+        link: 'https://cursos.alura.com.br/certificate/aa5f3a37-5e1d-4b5b-ad60-9629d02bf616'
+    },
+    {
+        img: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEkPb_YckN8NQ/company-logo_200_200/0/1655315590765?e=1663804800&v=beta&t=byqFDxU2X4jnUEIu6ogivVZ1Qi5Bu6HWJi84ko9aAWs',
         titulo: 'Comunicação não violenta: consciência para agir',
         paragrafo: [
             'Alura',
