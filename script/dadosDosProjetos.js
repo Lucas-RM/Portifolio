@@ -46,5 +46,11 @@ const projetos = [
         img: './img/projeto-agenda.jpg',
         titulo: 'projeto agenda',
         descricao: 'O projeto agenda é um site que as pessoas podem definir o ano, o mês, o dia e o horário de suas tarefas. Além disso, terá as funções de deletar e de marcar como concluído as tarefas finalizadas.'
+    },
+    {
+        link: 'https://lucas-rm.github.io/teclado/',
+        img: './img/teclado-teclas.jpg',
+        titulo: 'teclado (código da tecla)',
+        descricao: 'Se você não sabe qual a numeração (ou keyCode) das teclas do seu teclado e quer saber o mais rápido possível, acesse esse site e descubra.'
     }
 ];
