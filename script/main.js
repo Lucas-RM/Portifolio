@@ -1,15 +1,15 @@
-function mudaTitle(title) {document.title = title;}
+function mudaTitle(title) {document.title = title}
 
 function toggleMenu(event) {
     if (event.type === 'touchstart') event.preventDefault()
-    const $cabecalhoPrincipalNav = document.querySelector('.cabecalhoPrincipal-nav')
+    const $menu = document.querySelector('.menu')
     const $icone = document.querySelector('.fas')
 
-    $cabecalhoPrincipalNav.classList.toggle('active')
+    $menu.classList.toggle('active')
     $icone.classList.toggle('fa-solid')
     $icone.classList.toggle('fa-xmark')
 
-    const $active = $cabecalhoPrincipalNav.classList.contains('active')
+    const $active = $menu.classList.contains('active')
     event.currentTarget.setAttribute('aria-expanded', $active)
 
     if ($active) {
@@ -19,31 +19,35 @@ function toggleMenu(event) {
     }
 }
 
-const $pageScroll = document.documentElement
-const $fundoDesfocado = document.querySelector('.fundoDesfocado')
-const $visible = document.querySelectorAll('.visible')
-const $linkSobreMim = document.querySelector('#linkSobreMim')
-const $linkContatos = document.querySelector('#linkContatos')
-const $botaoFechar = document.querySelector('#botaoFechar')
-const $mobileMenu = document.querySelector('#mobile-menu')
-let pageTitle = document.title
-
-$linkSobreMim.addEventListener('click', () => {
+function sobreMim() {
+    $botaoFechar.style.display = 'block'
     $fundoDesfocado.style.display = 'block'
-    $visible[1].classList.toggle('visible')
+    $visible.classList.toggle('visible')
     $pageScroll.style.overflow = 'hidden'
     mudaTitle('Lucas R. Marcondes | Sobre Mim')
-})
+    $sobreMim_cabecalho.style.animation = 'moveIn 700ms linear'
+}
 
-$botaoFechar.addEventListener('click', () => {
-    $fundoDesfocado.style.display = 'none'
-    $visible[1].classList.toggle('visible')
-    $pageScroll.style.overflow = 'auto'
-    mudaTitle(pageTitle)
-})
+function botaoFechar() {
+    $botaoFechar.style.display = 'none'
+    setTimeout(() => {
+        $fundoDesfocado.style.display = 'none'
+        $visible.classList.toggle('visible')
+        $pageScroll.style.overflow = 'auto'
+        mudaTitle(pageTitle)
+    }, 650)
+    $sobreMim_cabecalho.style.animation = 'moveOut 700ms linear'
+}
 
-$linkContatos.addEventListener('click', () => {
-    $visible[0].classList.toggle('visible')
-})
+const $pageScroll = document.documentElement
+const $visible = document.querySelector('.visible')
+const $fundoDesfocado = document.querySelector('.fundoDesfocado')
+const $linkSobreMim = document.querySelector('#linkSobreMim')
+const $sobreMim_cabecalho = document.querySelector('.sobreMim__cabecalho')
+const $botaoFechar = document.querySelector('#sobreMim__btnFechar')
+const $mobileMenu = document.querySelector('#btnMobileMenu')
+let pageTitle = document.title
 
 $mobileMenu.addEventListener('click', toggleMenu)
+$linkSobreMim.addEventListener('click', sobreMim)
+$botaoFechar.addEventListener('click', botaoFechar)

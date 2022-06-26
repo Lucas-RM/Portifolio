@@ -22,72 +22,54 @@ function temMenosDeQuatroItens(itens, indiceDobotao) {
     }
 }
 
-function adicionarItemNaDiv(divItensEscondidos, divPrimeirosItens, i, item) {
+function adicionarItemNaDiv(divItensEscondidos, primeirosItens, i, item) {
     if (i > 2) { divItensEscondidos.innerHTML += item } 
-    else { divPrimeirosItens.innerHTML += item }
+    else { primeirosItens.innerHTML += item }
 }
 
 function adicionarItens(dados, classeDaDivDoItem) {
-    const $divPrimeirosItens = document.querySelectorAll('.divPrimeirosItens')
-    const $itensLicencasECertificados = document.querySelector('.itensLicencasECertificados')
+    const $primeirosItens = document.querySelectorAll('.itensDestaques')
     const $itensFormacaoAcademica = document.querySelector('.itensFormacaoAcademica')
-    const spanFormacaoAcademica = '.formacaoAcademica div span'
-    const spanLicencasECertificados = '.licencasECertificados div span'
-    const descricao = '.formacaoAcademica div .description'
+    const spanFormacaoAcademica = '.formacaoAcademica__info'
+    const descricaoFormacaoAcademica = '.formacaoAcademica__cabecalho .description'
+    const $itensLicencasECertificados = document.querySelector('.itensLicencasECertificados')
+    const spanLicencasECertificados = '.licencasECertificados__info'
 
     let item, indiceDoBotao;
 
     for (let i = 0; i < dados.length; i++) {
-        if (classeDaDivDoItem === 'licencasECertificados') {
-            indiceDoBotao = 2; 
-            item = licencasECerificados(dados, i)
-            adicionarItemNaDiv($itensLicencasECertificados, $divPrimeirosItens[1], i, item)
-            criaParagrafo(dados, i, spanLicencasECertificados)
-
-        } else if (classeDaDivDoItem === 'formacaoAcademica') {
+        if (classeDaDivDoItem === 'formacaoAcademica__conteudo') {
             indiceDoBotao = 0; 
             item = formacaoAcademica(dados, i)
 
-            adicionarItemNaDiv($itensFormacaoAcademica, $divPrimeirosItens[0], i, item)
+            adicionarItemNaDiv($itensFormacaoAcademica, $primeirosItens[0], i, item)
             criaParagrafo(dados, i, spanFormacaoAcademica)
 
             if (dados[i].descricao.length > 0) {
-                criaDescricao(dados, i, descricao)                
+                criaDescricao(dados, i, descricaoFormacaoAcademica)                
             } else {
-                document.querySelectorAll(descricao)[i].style.display = 'none'
+                document.querySelectorAll(descricaoFormacaoAcademica)[i].style.display = 'none'
             }
+
+        } else if (classeDaDivDoItem === 'licencasECertificados__conteudo') {
+            indiceDoBotao = 2; 
+            item = licencasECerificados(dados, i)
+            adicionarItemNaDiv($itensLicencasECertificados, $primeirosItens[1], i, item)
+            criaParagrafo(dados, i, spanLicencasECertificados)
         }
 
         temMenosDeQuatroItens(dados, indiceDoBotao)
     }   
 }
 
-function licencasECerificados(dados, i) {
+function formacaoAcademica(dados, i) {  
     return `
     <hr>
-    <div class="licencasECertificados item">
-        <img src="${dados[i].img}" class="imgItens">
-        <div>
-            <span>
-                <h4 class="h4">${dados[i].titulo}</h4>
-            </span>
-            
-            <div class="divLinkCertificado">
-                <a href="${dados[i].link}" target="_blank" class="linkCertificado" id="linkCertificado">Certificado</a>
-            </div>
-        </div>
-    </div>
-    `
-}
-
-function formacaoAcademica(dados, i) {
-    return `
-    <hr>
-    <div class="formacaoAcademica item">
-        <img src="${dados[i].img}" class="imgItens">
-        <div>
-            <span>
-                <h4 class="h4">${dados[i].titulo}</h4>
+    <div class="formacaoAcademica__conteudo item">
+        <img class="imgItem" src="${dados[i].img}">
+        <div class="formacaoAcademica__cabecalho">
+            <span class="formacaoAcademica__info">
+                <h4 class="curriculo__cardSubtitulo">${dados[i].titulo}</h4>
             </span>
 
             <div class="description"></div>
@@ -96,5 +78,23 @@ function formacaoAcademica(dados, i) {
     `
 }
 
-adicionarItens(licencasECertificadosDados, 'licencasECertificados')
-adicionarItens(formacaoAcademicaDados, 'formacaoAcademica')
+function licencasECerificados(dados, i) {
+    return `
+    <hr>
+    <div class="licencasECertificados__conteudo item">
+        <img  class="imgItem" src="${dados[i].img}">
+        <div class="licencasECertificados__cabecalho">
+            <span class="licencasECertificados__info">
+                <h4 class="curriculo__cardSubtitulo">${dados[i].titulo}</h4>
+            </span>
+            
+            <div class="divLinkCertificado">
+                <a class="linkCertificado" id="linkCertificado" href="${dados[i].link}" target="_blank">Certificado</a>
+            </div>
+        </div>
+    </div>
+    `
+}
+
+adicionarItens(formacaoAcademicaDados, 'formacaoAcademica__conteudo')
+adicionarItens(licencasECertificadosDados, 'licencasECertificados__conteudo')

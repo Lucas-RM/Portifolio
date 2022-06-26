@@ -3,7 +3,6 @@
     src: url('../fonts/TestFoundersGrotesk-Regular.otf') format('opentype');
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +15,31 @@ body {
     background-color: rgb(240, 239, 239);
 }
 
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.visible {
+    display: none;
+    visibility: hidden;
+}
+
+.conteudoPrincipal__section {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.subtitulo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.2em;
+    font-weight: 800;
+    color: rgb(31, 31, 31);
+
+    padding: 0 20px;
+
+    margin: 1.5em auto 1em;
+}
 
 /* CABEÇALHO PRINCIPAL */
 
@@ -28,12 +52,6 @@ body {
     box-shadow: 0px -2px 10px rgb(0 0 0 / 28%);
 }
 
-.container {
-    max-width: 90%;
-
-    margin: 0 auto;
-}
-
 .cabecalhoPrincipal .container {
     display: flex;
     justify-content: space-between;
@@ -42,24 +60,24 @@ body {
     padding: 15px 0;
 }
 
-.cabecalhoPrincipal-titulo {
+.cabecalhoPrincipal__titulo {
     font-family: 'Lobster';
     font-size: 2em;
     font-weight: 500;
     text-transform: capitalize;
 }
 
-.cabecalhoPrincipal-titulo a {
+.cabecalhoPrincipal__titulo .cabecalhoPrincipal__link {
     color: #0c0c0c;
     cursor: pointer;
 }
 
-#mobile-menu {
+.cabecalhoPrincipal__botao #btnMobileMenu {
     display: none;
     visibility: hidden;
 }
 
-.cabecalhoPrincipal-nav-ul {
+.menu__lista {
     display: flex;
     align-items: center;
 
@@ -69,60 +87,62 @@ body {
     font-weight: 400;
 }
 
-.cabecalhoPrincipal-nav-ul-itens {
+.menu__item {
     position: relative;
     margin-left: 30px;
 }
 
-.cabecalhoPrincipal-nav-ul-itens>a:hover {
+.menu__item > .menu__link:hover,
+.menu__item .menu__spanContato:hover {
     color: rgb(204, 135, 71);
 }
 
-.cabecalhoPrincipal-nav-ul-itens:nth-child(-n + 3)>a:hover:after {
+.menu__item:nth-child(-n + 3) > .menu__link:hover::after {
     content: "";
+
+    width: 100%;
+    height: 2px;
 
     position: absolute;
     left: 0;
     top: 25px;
 
-    width: 100%;
-    height: 2px;
-
     background-color: rgb(44, 99, 228);
 }
 
-.contatos {
+.menu__spanContato {
+    cursor: pointer;
+}
+
+.contatos__cabecalho {
+    display: none;
+}
+
+.menu__spanContato:hover .contatos__cabecalho {
     display: flex;
     justify-content: space-between;
     width: 115px;
 
     position: absolute;
-    right: 0;
-
-    background-color: rgba(17, 17, 17, 0.965);
-
+    margin-left: -45px;
+    margin-top: -35px;
     padding: 10px;
 
-    margin: 8px -10px 0 0;
-
+    background-color: rgba(17, 17, 17, 0.965);
     border-radius: 5px;
+    animation: fadeIn 300ms linear;
 }
 
-.visible {
-    display: none;
-    visibility: hidden;
-}
-
-.contatos a {
+.contatos__cabecalho .contatos__link {
     font-size: 25px;
     color: white;
 
     border: none;
 
-    transition: 200ms;
+    transition: 300ms;
 }
 
-.contatos a:hover {
+.contatos__cabecalho .contatos__link:hover {
     color: #11bafd;
 }
 
@@ -139,7 +159,7 @@ body {
     z-index: 2;
 
     -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
 }
 
 @-moz-document url-prefix() {
@@ -148,27 +168,28 @@ body {
     }
 }
 
-.section-sobreMim .container {
-    position: relative;
-    z-index: 10;
+.sobreMim .container {
     max-width: 85%;
     height: 100vh;
+
+    position: relative;
+    z-index: 10;
 }
 
-.section-sobreMim-divBotaoFechar {
+.sobreMim__botao {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
     position: absolute;
     top: -50px;
     left: 0;
     right: 0;
-    z-index: 10;
-
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    z-index: 10;    
 }
 
-.botaoFechar {
-    font-size: 20px;
+.sobreMim__btnFechar {
+    font-size: 21px;
     text-align: center;
     color: rgb(224, 224, 224);
     background-color: rgb(230, 9, 9);
@@ -186,12 +207,12 @@ body {
     transition: 500ms background;
 }
 
-.botaoFechar:hover {
+.sobreMim__btnFechar:hover {
     background-color: rgb(170, 11, 11);
     box-shadow: 0 5px 0 rgba(82, 1, 1, 0.87);
 }
 
-.botaoFechar:active {
+.sobreMim__btnFechar:active {
     position: relative;
     top: 5px;
     box-shadow: none;
@@ -201,15 +222,14 @@ body {
     animation: fadeIn 1s linear;
 }
 
-.section-sobreMim-container {
+.sobreMim__cabecalho {
     position: relative;
-    /* max-height: 87vh; */
 
     background-color: rgba(26, 26, 26, 0.965);
     border-radius: 12px;
 }
 
-.section-sobreMim-article {
+.sobreMim__artigo {
     max-height: 82vh;
 
     padding: 20px;
@@ -217,22 +237,22 @@ body {
     overflow: auto;
 }
 
-.section-sobreMim-article::-webkit-scrollbar {
+.sobreMim__artigo::-webkit-scrollbar {
     width: 7px;
     height: 7px;
 }
 
-.section-sobreMim-article::-webkit-scrollbar-thumb {
+.sobreMim__artigo::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: rgba(236, 233, 233, 0.8);
 }
 
-.section-sobreMim-article::-webkit-scrollbar-thumb:hover {
+.sobreMim__artigo::-webkit-scrollbar-thumb:hover {
     background: rgba(206, 206, 206, 0.8);
 }
 
-.section-sobreMim-foto {
+.sobreMim__avatar {
     width: 150px;
 
     float: left;
@@ -242,7 +262,7 @@ body {
     border-radius: 12px;
 }
 
-.section-sobreMim-article h1 {
+.sobreMim__artigo .sobreMim__paragrafo-destaque {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2em;
     font-weight: bold;
@@ -251,7 +271,7 @@ body {
     margin-bottom: 1.3em;
 }
 
-.section-sobreMim-descricao {
+.sobreMim__descricao {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.3em;
     line-height: 1.5;
@@ -261,16 +281,16 @@ body {
     margin-bottom: 1em;
 }
 
-.section-sobreMim-descricao>b {
+.sobreMim__descricao > b {
     font-weight: bold;
     color: rgb(12, 185, 185);
 }
 
-.section-sobreMim-descricao b a {
+.sobreMim__descricao b a {
     color: rgb(243, 219, 3);
 }
 
-.section-sobreMim-descricao b a:hover {
+.sobreMim__descricao b a:hover {
     text-decoration: underline;
 }
 
@@ -278,23 +298,7 @@ body {
 
 /* PROJETOS */
 
-.subtitulo {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2.2em;
-    font-weight: 800;
-    color: rgb(31, 31, 31);
-
-    padding: 0 20px;
-
-    margin: 1.5em auto 1em;
-}
-
-.conteudoPrincipal_Section {
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-.conteudoPrincipal_Section .container {
+.projetos .container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -360,17 +364,16 @@ body {
 
 /* CURRÍCULO */
 
-.sectionCurriculo.subtitulo {
-    padding: 0 calc(80% - 69.5%);
+.curriculo .subtitulo {
+    max-width: 90%;
 }
 
-.sectionCurriculo .container {
-    max-width: 80%;
-
-    margin: 0 auto;
+.curriculo__flexBox {
+    display: flex;
+    align-items: flex-start;
 }
 
-.conteudoPrincipal_Section-container {
+.curriculo__card {
     width: 100%;
 
     margin: 0 0 2em 0;
@@ -383,7 +386,15 @@ body {
     box-shadow: 0px 0px 7px 2px rgb(0 0 0 / 18%);
 }
 
-.cvTitulos {
+.curriculo__flexBox .curriculo__card {
+    margin-right: 1.5rem;
+}
+
+.curriculo__flexBox > .curriculo__card:last-child {
+    margin-right: 0;
+}
+
+.curriculo__cardTitulo {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.8em;
     font-weight: 700;
@@ -396,38 +407,33 @@ body {
     margin: 0 0 1em;
 }
 
-/* Dados Gerais */
-
-.dadosGerais table tr td,
-.containerHabilidades span p {
-    font-size: 1.05em;
-    text-transform: capitalize;
-    word-break: break-word;
-}
-
-table tr:nth-child(2n) td {
-    text-transform: lowercase;
-}
-
-.dadosGerais .h4 {
-    text-transform: capitalize;
-}
-
-.h4 {
+.curriculo__cardSubtitulo {
     font-size: 1.12em;
     font-weight: 800;
     text-transform: capitalize;
     color: rgba(216, 88, 38, 0.911);
 }
 
-.dadosGerais table tr .h4 {
+/* Dados Gerais */
+
+.dadosGerais__cabecalho > .curriculo__cardSubtitulo {
     display: block;
-    
-    margin: 0 1em 0.65em 0;
-    
+    font-size: 1em;
     text-align: right;
+
+    margin-right: 1em;
+    margin-bottom: 0.65em;
 }
 
+.dadosGerais__paragrafo,
+.containerHabilidades span p {
+    font-size: 1.05em;
+    text-transform: capitalize;
+}
+
+.dadosGerais__cabecalho:nth-child(2n) > .dadosGerais__paragrafo {
+    text-transform: lowercase;
+}
 
 .dadosGerais table tr td a {
     transition: 150ms all;
@@ -439,76 +445,110 @@ table tr:nth-child(2n) td {
 
 /* Objetivo */
 
-.sectionObjetivo p {
+.objetivo .objetivo__paragrafo {
     text-align: justify;
     text-indent: 2em;
     line-height: 1.5;
-    margin: 0 0 0.5em;
+
+    margin-bottom: .5em;
 }
 
-.sectionObjetivo p b {
+.objetivo .objetivo__paragrafo b {
     font-weight: 800;
 }
 
 /* Habilidades */
 
-.containerHabilidades span {
-    display: block;
-
-    margin: 1em 0;
+.habilidades__cabecalho .curriculo__cardSubtitulo {
+    display: inline-block;
+    margin-right: .65em;
+    margin-bottom: .75em;
 }
 
-.containerHabilidades span p {
+.habilidades__itens {
+    color: #f0f8ff;
+}
+
+.habilidades__paragrafo {
+    font-size: .9em;
+    font-weight: bold;
+    text-align: center;
+
     display: inline-block;
 
-    line-height: 1.8;
+    margin-right: .2em;
+    padding: 3px 8px;
 
-    margin: 0 .2em 0;
+    background-color: rgb(21, 110, 226);
+    border-radius: 8px;
+
+    cursor: default;
+}
+
+.habilidades__corpo > hr {
+    margin: 1em 0;
 }
 
 /* Formação Acadêmica e Licenças & Certificados */
 
-.formacaoAcademica, 
-.licencasECertificados {
+.itensDestaques hr:first-child {
+    display: none;
+}
+
+.formacaoAcademica__conteudo,
+.licencasECertificados__conteudo {
     display: flex;
     align-items: flex-start;
 
     margin: 1.3em 0;
 }
 
-.imgItens {
+.exibirItens {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.exibirItens > .formacaoAcademica__conteudo,
+.exibirItens > .licencasECertificados__conteudo {
+    position: relative;
+    overflow: hidden;
+    transition: 3s;
+}
+
+.exibirItens.exibir > .formacaoAcademica__conteudo,
+.exibirItens.exibir > .licencasECertificados__conteudo {
+    overflow: initial;
+}
+
+.imgItem {
     width: 50px;
 
     margin: 0 1em 0 0;
 }
 
-.formacaoAcademica div span > p,
-.licencasECertificados div span > p {
+.formacaoAcademica__info > p,
+.licencasECertificados__info > p {
     margin: .3em 0 0;
 }
 
-.formacaoAcademica div span > p:last-child,
-.licencasECertificados div span > p:last-child {
+.formacaoAcademica__info > p:last-child,
+.licencasECertificados__info > p:last-child {
     color: rgb(164, 168, 172);
 }
 
-.formacaoAcademica .description {
+.formacaoAcademica__cabecalho .description {
     font-size: 0.9em;
 
     margin: 1.5em 0 0;
 }
 
-.formacaoAcademica .description p {
+.formacaoAcademica__cabecalho .description p {
     margin: 0.6em 0 0;
-}    
-
-/* Licenças & Certificados */
-
-.divPrimeirosItens hr:first-child {
-    display: none;
 }
 
-.licencasECertificados > div {
+.licencasECertificados__cabecalho {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -516,8 +556,8 @@ table tr:nth-child(2n) td {
     width: 100%;
 }
 
-
 /* Link Certificado */
+
 .divLinkCertificado {
     margin: 1em 1em 0 0;
 }
@@ -530,43 +570,18 @@ table tr:nth-child(2n) td {
     font-weight: 500;
     color: #444444;
     background-color: rgb(243, 243, 243);
-    
+
     border: .2px solid #444444;
     border-radius: 5px;
-    
+
     cursor: pointer;
-    
+
     transition: 150ms all;
 }
 
 .divLinkCertificado .linkCertificado:hover {
     color: rgb(21, 110, 226);
     border: .2px solid rgb(21, 110, 226);
-}
-
-/* Exibir e Ocultar Itens */
-
-.mostrarMenos {
-    display: none;
-}
-
-.exibirItens {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    transition: 1s;
-}
-
-.exibirItens > .formacaoAcademica, 
-.exibirItens > .licencasECertificados {
-    position: relative;
-    overflow: hidden;
-    transition: 3s;
-}
-
-.exibirItens.exibir > .formacaoAcademica, 
-.exibirItens.exibir > .licencasECertificados {
-    overflow: initial;
 }
 
 /* Botao */
@@ -577,13 +592,14 @@ table tr:nth-child(2n) td {
 
 .btnItens {
     font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 100%;
-    height: 35px;
-
     font-size: 0.90em;
     font-weight: 500;
     color: rgb(112, 112, 112);
     background-color: rgb(243, 243, 243);
+    
+    width: 100%;
+
+    padding: 6px;
 
     border: .2px solid #6d6d6d;
     border-radius: 5px;
@@ -596,6 +612,9 @@ table tr:nth-child(2n) td {
 .btnItens:hover {
     color: rgb(61, 61, 61);
     background-color: rgb(228, 228, 228);
+}
+
+.btnItens i {
 }
 
 /* RODAPE PRINCIPAL*/
@@ -627,19 +646,28 @@ table tr:nth-child(2n) td {
     }
 }
 
+@keyframes moveIn {
+    from {transform: translate(0, -40%)}
+    to {transform: translate(0, 0)}
+}
+
+@keyframes moveOut {
+    from {transform: translate(0, 0)}
+    to {transform: translate(0, -100%)}
+}
 
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
-    .section-sobreMim-foto {
+    .sobreMim__avatar {
         display: none;
     }
 
-    .section-sobreMim-article h1 {
+    .sobreMim__artigo .sobreMim__paragrafo-destaque {
         text-align: center;
     }
 
-    .section-sobreMim-descricao {
+    .sobreMim__descricao {
         text-indent: 2em;
     }
 
@@ -668,28 +696,86 @@ table tr:nth-child(2n) td {
 }
 
 @media screen and (max-width: 929px) {
-    #mobile-menu {display: block; font-size: 1.9em; padding: 3px 7px; background: none; border: none; cursor: pointer; visibility: visible;}
+    .cabecalhoPrincipal__botao #btnMobileMenu {
+        display: block;
+        font-size: 1.9em;
+        padding: 3px 7px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        visibility: visible;
+    }
 
-    .cabecalhoPrincipal-nav-ul {display: flex; visibility: hidden; position: absolute; top: 70px; right: 0; width: 100%; height: 0; background-color: rgb(243, 243, 243); overflow-y: hidden; z-index: 1000; transition: .6s all; justify-content: space-around; align-items: center;flex-direction: column;}
+    .menu__lista {
+        display: flex;
+        visibility: hidden;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgb(243, 243, 243);
+        overflow-y: hidden;
+        z-index: 1000;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        transition: .6s all;
+    }
 
-    .cabecalhoPrincipal-nav-ul-itens::after {visibility: hidden;}
+    .menu__item::after {
+        visibility: hidden;
+    }
 
-    .cabecalhoPrincipal-nav-ul-itens:nth-child(-n + 3) > a:hover:after {content: ''; background: none;}
+    .menu__item:nth-child(-n + 3) > .menu__link:hover::after {
+        content: '';
+        background: none;
+    }
 
-    .cabecalhoPrincipal-nav.active .cabecalhoPrincipal-nav-ul {visibility: visible; height: calc(100vh - 70px); overflow-y: hidden;}
+    .menu.active .menu__lista {
+        visibility: visible;
+        height: calc(100vh - 70px);
+        overflow-y: hidden;
+    }
 
-    .cabecalhoPrincipal-nav.active .cabecalhoPrincipal-nav-ul-itens::after {content: ''; visibility: visible;}
+    .menu.active .menu__item::after {
+        content: '';
+        visibility: visible;
+    }
 
-    .cabecalhoPrincipal-nav-ul-itens {text-align: center; padding: 1em 0; margin: 0 1em; overflow: hidden; cursor: default;}
+    .menu__item {
+        text-align: center;
+        padding: 1em 0;
+        margin: 0 1em;
+        overflow: hidden;
+        cursor: default;
+    }
 
-    .cabecalhoPrincipal-nav-ul-itens::after {content: ''; position: fixed; left: 1em; right: 1em; margin: 0 auto; margin-top: 1em; background-color:  rgba(116, 116, 116, 0.541); width: 90%; height: 2px; display: block;}
+    .menu__item::after {
+        content: '';
+        position: fixed;
+        left: 1em;
+        right: 1em;
+        margin: 0 auto;
+        margin-top: 1em;
+        background-color: rgba(116, 116, 116, 0.541);
+        width: 90%;
+        height: 2px;
+        display: block;
+    }
 
-    .cabecalhoPrincipal-nav-ul-itens .contatos {position: fixed; left: 0; right: 0; margin: -80px auto;}
+    .menu__spanContato:hover .contatos__cabecalho {
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin: -65px auto 0;
+    }
 }
 
 @media screen and (min-width: 930px) {
+
     .subtitulo,
-    .conteudoPrincipal_Section .container {
+    .projetos .container {
         max-width: 1524px;
     }
 

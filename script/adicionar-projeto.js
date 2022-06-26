@@ -1,4 +1,4 @@
-const containerProjeto = document.querySelector('.conteudoPrincipal_Section .container')
+const containerProjeto = document.querySelector('.projetos .container')
 
 for (let i = 0; i < projetos.length; i++) {
     const div_postProjeto = document.createElement('div');
