@@ -1,0 +1,481 @@
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 0) {
+    /* CABEÇALHO PRINCIPAL */
+
+    .cabecalhoPrincipal__botao #btnMobileMenu {
+        font-size: 1.9em;
+
+        display: block;
+
+        padding: 3px 7px;
+        
+        background: none;
+        border: none;
+
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .menu__lista {
+        justify-content: space-around;
+        flex-direction: column;
+
+        position: absolute;
+        top: 70px;
+        right: 0;
+        z-index: 1000;
+        
+        width: 100%;
+        height: 0;
+
+        background-color: rgb(243, 243, 243);
+        visibility: hidden;
+        overflow-y: hidden;
+
+        transition: .6s all;
+    }
+
+    .menu.active .menu__lista {
+        height: calc(100vh - 70px);
+
+        visibility: visible;
+        overflow-y: hidden;
+    }
+
+    .menu__item {
+        margin: 0 1em;
+        padding: 1em 0;
+        
+        overflow: hidden;
+    } 
+
+    .menu__item::after {
+        visibility: hidden;
+    }
+
+    .menu__item:nth-child(-n + 3) > .menu__link:hover::after {
+        content: '';
+        background: none;
+    }
+
+    .menu__item::after {
+        content: '';
+
+        display: block;
+
+        position: fixed;
+        left: 1em;
+        right: 1em;
+
+        margin: 0 auto;
+        margin-top: 1em;
+        
+        width: 90%;
+        height: 2px;
+
+        background-color: rgba(116, 116, 116, 0.541);        
+    }
+
+    .menu.active .menu__item::after {
+        content: '';
+        visibility: visible;
+    }
+
+    .menu__spanContato:hover .contatos__cabecalho {
+        position: fixed;
+        left: 0;
+        right: 0;
+
+        margin: -65px auto 0;
+    }
+
+    /* SOBRE MIM */
+
+    .sobreMim__paragrafo-destaque {
+        text-align: center;
+    }
+
+    .sobreMim__avatar {
+        display: none;
+    }
+
+    .sobreMim__descricao {
+        text-indent: 2em;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+
+    .subtitulo {
+        text-align: center;
+    }
+
+    /* Projetos */
+
+    .conteudoPrincipal_Section-postProjetos {
+        flex: 0 0 80%;
+        margin: 20px auto;
+    }
+
+    .conteudoPrincipal_Section-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Currículo */
+
+    .curriculo__flexBox {
+        flex-wrap: wrap;
+    }
+
+    .curriculo__flexBox .curriculo__card {
+        margin-right: 0;
+    }
+
+    .curriculo__cardTitulo {
+        text-align: center;
+    }
+
+    .dadosGerais__corpo {
+        width: 100%;
+    }
+
+    .dadosGerais__cabecalho {
+        margin-bottom: 1em;
+
+        border-bottom: 1px solid rgb(150, 179, 218);
+    }
+
+    .dadosGerais__cabecalho:last-child {
+        border-bottom: 0;
+    }
+    
+    .dadosGerais__cabecalho, .dadosGerais__paragrafo  {
+        display: block;
+        width: 100%;
+    }
+
+    .dadosGerais__cabecalho > .curriculo__cardSubtitulo {
+        font-size: 1.2em;
+        text-align: left;
+
+        display: block;
+
+        margin-right: 0;
+        margin-bottom: 0.4em;
+    }
+    
+    .dadosGerais__paragrafo {
+        margin-bottom: 1em;
+    }
+
+    .habilidades__cabecalho .curriculo__cardSubtitulo {
+        font-size: .98em;
+        text-align: center;
+
+        display: block;
+    }
+
+    .habilidades__itens {
+        display: block;
+        text-align: center;
+    }
+
+    .habilidades__paragrafo {
+        margin-top: .5em;
+        margin-bottom: 1em;
+    }
+
+    .habilidades__corpo > hr {
+        margin-top: 0;
+    }
+
+    .formacaoAcademica__conteudo, .licencasECertificados__conteudo {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgItem {
+        display: none;
+    }
+
+
+    .formacaoAcademica__info, .licencasECertificados__info {
+        display: block;
+        text-align: center;
+    }
+
+    .formacaoAcademica__cabecalho .curriculo__cardSubtitulo, 
+    .licencasECertificados__cabecalho .curriculo__cardSubtitulo {
+        font-size: .85em;
+        line-height: 1.5;
+        color: white;
+        background-color: rgb(240, 126, 60);
+
+        display: inline-block;
+
+        margin-bottom: .5em;
+        padding: 5px 10px;
+
+        border-radius: 8px;
+    }
+
+    .formacaoAcademica__cabecalho .description p {
+        text-align: center;
+    }
+
+    .licencasECertificados__cabecalho {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: auto;
+    }
+
+    .divLinkCertificado {
+        margin: 1.5em auto 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* SOBRE MIM */
+
+    .sobreMim__paragrafo-destaque {
+        text-align: left;
+    }
+    
+    .sobreMim__avatar {
+        display: block;
+    }
+
+    .sobreMim__descricao {
+        text-indent: 0;
+    }    
+
+    /* CONTÉUDO PRINCIPAL */
+
+    .subtitulo {
+        text-align: left;
+    }
+
+    /* Projetos */
+
+    .conteudoPrincipal_Section-postProjetos {
+        flex: 0 0 calc((100% - (20px * 2)) / 2);
+    }
+
+    .conteudoPrincipal_Section-postProjetos:nth-child(2n+1) {
+        margin-left: 0;
+    }
+
+    .conteudoPrincipal_Section-postProjetos:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    /* CABEÇALHO PRINCIPAL */
+
+    .cabecalhoPrincipal__botao #btnMobileMenu {
+        display: none;
+        visibility: hidden;
+    }
+
+    .menu__lista {
+        justify-content: initial;
+        flex-direction: row;
+
+        position: relative;
+        top: auto;
+        right: auto;
+
+        width: auto;
+
+        background-color: transparent;
+    }
+
+    .menu.active .menu__lista, .menu__lista {
+        height: auto;
+
+        visibility: visible;
+        overflow-y: initial;
+    }
+
+    .menu__item {
+        margin: 0 0 0 1.5em;
+        padding: initial;
+
+        overflow: initial;
+    }
+
+    .menu__item:nth-child(-n + 3) > .menu__link:hover::after {
+        content: "";
+    
+        background-color: rgb(44, 99, 228);
+    }
+
+    .menu.active .menu__item::after {
+        content: '';
+        visibility: hidden;
+    }
+        
+    .menu__spanContato:hover .contatos__cabecalho {
+        position: absolute;
+        margin-left: -45px;
+        margin-top: -35px;
+    }
+
+    /* Projetos */
+
+    .conteudoPrincipal_Section-postProjetos {
+        flex: 0 0 calc((100% - (20px * 4)) / 3);
+    }
+    
+    .conteudoPrincipal_Section-postProjetos:nth-child(2n+1) {
+        margin-left: 20px;
+    }
+
+    .conteudoPrincipal_Section-postProjetos:nth-child(2n) {
+        margin-right: 20px;
+    }
+
+    .conteudoPrincipal_Section-postProjetos:nth-child(3n+1) {
+        margin-left: 0;
+    }
+
+    .conteudoPrincipal_Section-postProjetos:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .conteudoPrincipal_Section-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Currículo */
+
+    .curriculo__cardTitulo {
+        text-align: left;
+    }
+
+    .curriculo__flexBox {
+        flex-wrap: nowrap;
+    }
+
+    .curriculo__flexBox .curriculo__card {
+        margin-right: 1.5rem;
+    }
+
+    .dadosGerais__cabecalho {
+        display: table-row;
+
+        margin-bottom: 0;
+
+        border-bottom: 0;
+    }
+    
+    .dadosGerais__cabecalho, .dadosGerais__paragrafo  {
+        width: auto;
+    }
+
+    .dadosGerais__cabecalho > .curriculo__cardSubtitulo {
+        font-size: 1em;
+        text-align: right;
+
+        display: block;
+
+        margin-right: 1em;
+        margin-bottom: 0.65em;
+    }
+
+    .habilidades__cabecalho {
+        display: flex;
+        align-items: center;
+    }
+
+    .habilidades__itens {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .dadosGerais__paragrafo {
+        display: table-cell;
+
+        margin-bottom: 0;
+    }
+
+    .habilidades__cabecalho .curriculo__cardSubtitulo {
+        font-size: 1.12em;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    .habilidades__paragrafo {
+        margin-top: 0;
+        margin-right: 1.5em;
+    }
+
+    .formacaoAcademica__conteudo,
+    .licencasECertificados__conteudo {
+        justify-content: initial;
+        align-items: flex-start;
+    }
+
+    .imgItem {
+        display: block;
+    }
+
+    .formacaoAcademica__info, .licencasECertificados__info {
+        text-align: left;
+    }
+
+    .formacaoAcademica__cabecalho .curriculo__cardSubtitulo, 
+    .licencasECertificados__cabecalho .curriculo__cardSubtitulo {
+        font-size: 1.12em;
+        line-height: 0;
+        color: rgba(216, 88, 38, 0.911);
+        background-color: transparent;
+        
+        margin-bottom: 0;
+        padding: 0;
+
+        border-radius: 0;
+    }
+
+    .formacaoAcademica__cabecalho .description p {
+        text-align: left;
+    }
+
+    .licencasECertificados__cabecalho {
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 100%;
+    }
+
+    .divLinkCertificado {
+        margin: 1.5em 0 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .projetos .container,
+    .subtitulo {
+        max-width: 1524px;
+    }
+
+    .habilidades__paragrafo {
+        margin-right: 1em;
+    }
+
+    .licencasECertificados__cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .divLinkCertificado {
+        margin: 0 1em 0 0;
+    }
+}
