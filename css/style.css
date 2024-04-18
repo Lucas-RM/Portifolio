@@ -53,12 +53,32 @@ body {
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 @keyframes moveIn {
-    from {transform: translate(0, -40%)}
-    to {transform: translate(0, 0)}
+    from {
+        transform: translate(0, -40%)
+    }
+
+    to {
+        transform: translate(0, 0)
+    }
 }
 
 @keyframes moveOut {
-    from {transform: translate(0, 0)}
-    to {transform: translate(0, -100%)}
+    from {
+        transform: translate(0, 0)
+    }
+
+    to {
+        transform: translate(0, -100%)
+    }
 }

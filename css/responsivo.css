@@ -124,14 +124,6 @@
 
     /* Currículo */
 
-    .curriculo__flexBox {
-        flex-wrap: wrap;
-    }
-
-    .curriculo__flexBox .curriculo__card {
-        margin-right: 0;
-    }
-
     .curriculo__cardTitulo {
         text-align: center;
     }
@@ -252,12 +244,6 @@
         text-indent: 0;
     }    
 
-    /* CONTÉUDO PRINCIPAL */
-
-    .subtitulo {
-        text-align: left;
-    }
-
     /* Projetos */
 
     .conteudoPrincipal_Section-postProjetos {
@@ -325,6 +311,12 @@
         margin-top: -35px;
     }
 
+    /* CONTÉUDO PRINCIPAL */
+
+    .subtitulo {
+        text-align: left;
+    }
+
     /* Projetos */
 
     .conteudoPrincipal_Section-postProjetos {
@@ -354,16 +346,17 @@
 
     /* Currículo */
 
+    .card__infoGeral {
+        width: auto;
+        padding-right: 4em;
+    }
+
     .curriculo__cardTitulo {
         text-align: left;
     }
 
-    .curriculo__flexBox {
-        flex-wrap: nowrap;
-    }
-
-    .curriculo__flexBox .curriculo__card {
-        margin-right: 1.5rem;
+    .dadosGerais__corpo {
+        width: auto;
     }
 
     .dadosGerais__cabecalho {

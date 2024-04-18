@@ -6,9 +6,8 @@
     max-width: 90%;
 }
 
-.curriculo__flexBox {
-    display: flex;
-    align-items: flex-start;
+.card__infoGeral {
+    display: inline-block;
 }
 
 .curriculo__card {
@@ -24,7 +23,7 @@
     box-shadow: 0px 0px 7px 2px rgb(0 0 0 / 18%);
 }
 
-.curriculo__flexBox > .curriculo__card:last-child {
+.card__infoGeral:last-child {
     margin-right: 0;
 }
 
@@ -47,6 +46,10 @@
     color: rgba(216, 88, 38, 0.911);
 }
 
+.curriculo__cardSubtitulo > span {
+    text-transform: lowercase;
+}
+
 /* Dados Gerais */
 
 .dadosGerais__paragrafo {
@@ -54,7 +57,7 @@
     text-transform: capitalize;
 }
 
-.dadosGerais__cabecalho:nth-child(2n) > .dadosGerais__paragrafo {
+.dadosGerais__cabecalho:nth-child(2n)>.dadosGerais__paragrafo {
     text-transform: lowercase;
 }
 
@@ -106,7 +109,7 @@
     cursor: default;
 }
 
-.habilidades__corpo > hr {
+.habilidades__corpo>hr {
     margin: 1em 0;
 }
 
@@ -130,15 +133,15 @@
     margin: 1.3em 0;
 }
 
-.exibirItens > .formacaoAcademica__conteudo,
-.exibirItens > .licencasECertificados__conteudo {
+.exibirItens>.formacaoAcademica__conteudo,
+.exibirItens>.licencasECertificados__conteudo {
     position: relative;
     overflow: hidden;
     transition: 3s;
 }
 
-.exibirItens.exibir > .formacaoAcademica__conteudo,
-.exibirItens.exibir > .licencasECertificados__conteudo {
+.exibirItens.exibir>.formacaoAcademica__conteudo,
+.exibirItens.exibir>.licencasECertificados__conteudo {
     overflow: initial;
 }
 
@@ -148,13 +151,13 @@
     margin: 0 1em 0 0;
 }
 
-.formacaoAcademica__info > p,
-.licencasECertificados__info > p {
+.formacaoAcademica__info>p,
+.licencasECertificados__info>p {
     margin: .3em 0 0;
 }
 
-.formacaoAcademica__info > p:last-child,
-.licencasECertificados__info > p:last-child {
+.formacaoAcademica__info>p:last-child,
+.licencasECertificados__info>p:last-child {
     color: rgb(164, 168, 172);
 }
 
@@ -185,7 +188,7 @@
     background-color: rgb(243, 243, 243);
 
     display: inline-block;
-    
+
     padding: 8px 20px;
 
     border: .2px solid #444444;
@@ -203,17 +206,13 @@
 
 /* Botão */
 
-.divBtnItens {
-    /* margin: 1em 0 0; */
-}
-
 .btnItens {
     font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 0.90em;
     font-weight: 500;
     color: rgb(112, 112, 112);
     background-color: rgb(243, 243, 243);
-    
+
     width: 100%;
 
     padding: 7px 10px;
