@@ -25,7 +25,7 @@ function sobreMim() {
     $visible.classList.toggle('visible')
     $pageScroll.style.overflow = 'hidden'
     mudaTitle('Lucas R. Marcondes | Sobre Mim')
-    $sobreMim_cabecalho.style.animation = 'moveIn 700ms linear'
+    $sobreMim_cabecalho.style.animation = 'fadeIn 500ms linear'
 }
 
 function botaoFechar() {
@@ -35,8 +35,8 @@ function botaoFechar() {
         $visible.classList.toggle('visible')
         $pageScroll.style.overflow = 'auto'
         mudaTitle(pageTitle)
-    }, 650)
-    $sobreMim_cabecalho.style.animation = 'moveOut 700ms linear'
+    }, 250)
+    $sobreMim_cabecalho.style.animation = 'fadeOut 300ms linear'
 }
 
 const $pageScroll = document.documentElement
