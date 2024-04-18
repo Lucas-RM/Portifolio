@@ -1,6 +1,6 @@
 const formacaoAcademicaDados = [
     {
-        img: 'https://media-exp1.licdn.com/dms/image/C4E0BAQEz5mZ_QcLylw/company-logo_100_100/0/1644871045148?e=1663804800&v=beta&t=U9zeoiEapY-7kGvNrRYn7VkRELyoFHDwarkHVKZSLWY',
+        img: 'https://media.licdn.com/dms/image/D4E0BAQEWNDeUOTnZlg/company-logo_200_200/0/1682344717420/unip_logo?e=1721260800&v=beta&t=tgPi8hsv8vJf6eT_KZt0TjBnQO0OrlHcm9erKvmTd0s',
         titulo: 'universidade paulista',
         paragrafo: [
             'Bacharelado, Ciência da Computação',
@@ -10,7 +10,7 @@ const formacaoAcademicaDados = [
     },
     {
         img: 'https://static-exp2.licdn.com/sc/h/8zzzkhxduv0r11cuxbs48pg03',
-        titulo: 'escola estadual professor eusébio de paula marcondes',
+        titulo: 'escola estadual professor eusébio <span>de</span> paula marcondes',
         paragrafo: [
             'Ensino Médio',
             '2019 - 2021'
@@ -20,7 +20,7 @@ const formacaoAcademicaDados = [
         ]
     },
     {
-        img: 'https://media-exp1.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343095?e=1663804800&v=beta&t=Eiy2eNFya3j2SUnmlppttnKZBMKf4Un3H5r94GIe4IY',
+        img: 'https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ',
         titulo: 'CEAP - centro educacional assistencial profissionalizante',
         paragrafo: [
             'Samsung Innovation Campus • 1 ano, Programação',
@@ -33,7 +33,7 @@ const formacaoAcademicaDados = [
         ]
     },
     {
-        img: 'https://media-exp1.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343095?e=1663804800&v=beta&t=Eiy2eNFya3j2SUnmlppttnKZBMKf4Un3H5r94GIe4IY',
+        img: 'https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ',
         titulo: 'CEAP - centro educacional assistencial profissionalizante',
         paragrafo: [
             'Técnico em Informática • 2 anos',
@@ -45,7 +45,7 @@ const formacaoAcademicaDados = [
         ]
     },
     {
-        img: 'https://media-exp1.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343095?e=1663804800&v=beta&t=Eiy2eNFya3j2SUnmlppttnKZBMKf4Un3H5r94GIe4IY',
+        img: 'https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ',
         titulo: 'CEAP - centro educacional assistencial profissionalizante',
         paragrafo: [
             'Informática Aplicada • 1 ano',
@@ -57,7 +57,7 @@ const formacaoAcademicaDados = [
         ]
     },
     {
-        img: 'https://media-exp1.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343095?e=1663804800&v=beta&t=Eiy2eNFya3j2SUnmlppttnKZBMKf4Un3H5r94GIe4IY',
+        img: 'https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ',
         titulo: 'CEAP - centro educacional assistencial profissionalizante',
         paragrafo: [
             'Informática Básica • 1 ano',
@@ -69,7 +69,7 @@ const formacaoAcademicaDados = [
         ]
     },
     {
-        img: 'https://media-exp1.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343095?e=1663804800&v=beta&t=Eiy2eNFya3j2SUnmlppttnKZBMKf4Un3H5r94GIe4IY',
+        img: 'https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ',
         titulo: 'CEAP - centro educacional assistencial profissionalizante',
         paragrafo: [
             'Eletricidade Industrial • 1 ano',
