@@ -6,8 +6,9 @@
     max-width: 90%;
 }
 
-.card__infoGeral {
-    display: inline-block;
+.curriculo__flexBox {
+    display: flex;
+    align-items: flex-start;
 }
 
 .curriculo__card {
@@ -21,10 +22,6 @@
     border-radius: 5px;
 
     box-shadow: 0px 0px 7px 2px rgb(0 0 0 / 18%);
-}
-
-.card__infoGeral:last-child {
-    margin-right: 0;
 }
 
 .curriculo__cardTitulo {
@@ -113,7 +110,7 @@
     margin: 1em 0;
 }
 
-/* Formação Acadêmica e Licenças & Certificados */
+/* Experiência, Formação Acadêmica e Licenças & Certificados */
 
 .itensDestaques hr:first-child {
     display: none;
@@ -126,6 +123,7 @@
     transition: 1s;
 }
 
+.experiencia__conteudo,
 .formacaoAcademica__conteudo,
 .licencasECertificados__conteudo {
     display: flex;
@@ -133,6 +131,7 @@
     margin: 1.3em 0;
 }
 
+.exibirItens>.experiencia__conteudo,
 .exibirItens>.formacaoAcademica__conteudo,
 .exibirItens>.licencasECertificados__conteudo {
     position: relative;
@@ -140,6 +139,7 @@
     transition: 3s;
 }
 
+.exibirItens.exibir>.experiencia__conteudo,
 .exibirItens.exibir>.formacaoAcademica__conteudo,
 .exibirItens.exibir>.licencasECertificados__conteudo {
     overflow: initial;
@@ -151,26 +151,55 @@
     margin: 0 1em 0 0;
 }
 
+.experiencia__info>p,
 .formacaoAcademica__info>p,
 .licencasECertificados__info>p {
     margin: .3em 0 0;
 }
 
+.experiencia__info>p:last-child,
 .formacaoAcademica__info>p:last-child,
 .licencasECertificados__info>p:last-child {
     color: rgb(164, 168, 172);
 }
 
-.formacaoAcademica__cabecalho .description {
+.description {
     font-size: 0.9em;
 
     margin: 1.5em 0 0;
 }
 
-.formacaoAcademica__cabecalho .description p {
+.description p {
     line-height: 1.5;
 
     margin: 0.6em 0 0;
+}
+
+.experiencia__cargos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    
+    margin-top: 1.5em;
+}
+
+.experiencia__cargos > span {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.80em;
+    font-weight: 500;
+    color: #444444;
+    background-color: rgb(243, 243, 243);
+    border: .2px solid #444444;
+    border-radius: 15px;
+    
+    padding: .7em 1em;
+
+    cursor: default;
+}
+
+.experiencia__cargos > span:hover {
+    color: rgb(21, 110, 226);
+    border: .2px solid rgb(21, 110, 226);
 }
 
 .licencasECertificados__cabecalho {
@@ -204,7 +233,7 @@
     border: .2px solid rgb(21, 110, 226);
 }
 
-/* Botão */
+/* Botões */
 
 .btnItens {
     font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -212,6 +241,8 @@
     font-weight: 500;
     color: rgb(112, 112, 112);
     background-color: rgb(243, 243, 243);
+
+    display: none;
 
     width: 100%;
 
