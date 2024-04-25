@@ -1,71 +1,79 @@
-function numeroDeElementos(classe) {
-    return classe.length
-}
-
-function somaAlturaDosItens(itens) {
-    let altura = 0    
+function somaAlturaDosItens(itens, margemDeErro) {
+    let altura = 0
     itens.forEach(element => {
         const $style = getComputedStyle(element)
         const $itemMarginTop = $style.marginTop
         const $itemMarginBottom = $style.marginBottom
-        
-        altura += element.offsetHeight + parseInt($itemMarginTop) + parseInt($itemMarginBottom) + 3
+
+        altura += element.offsetHeight + parseInt($itemMarginTop) + parseInt($itemMarginBottom) + margemDeErro
     })
     return altura
 }
 
-function classeDoItem(id) {
-    switch (id) {
-        case 0:
-            return 'itensFormacaoAcademica'
-            break
-        case 1:
-            return 'itensLicencasECertificados'
-            break
-    }
-}
-        
+
 function mostrarMais(id) {
-    const classe = classeDoItem(id)
-    document.querySelector(`.${classe}`).classList.toggle('exibir') 
-    
-    const $itens = document.querySelectorAll(`.${classe} .item`)
-    const alturaDosItens = somaAlturaDosItens($itens)
-    document.querySelector(`.${classe}`).style.height = `${alturaDosItens}px`
-    
+    const $itensEscondidos = document.querySelectorAll('.itensEscondidos')[id]
+    $itensEscondidos.classList.toggle('exibir')
+
+    const $itens = $itensEscondidos.querySelectorAll('.item')
+    const alturaDosItens = somaAlturaDosItens($itens, 3)
+    $itensEscondidos.style.height = `${alturaDosItens}px`
+
     $btnMostrarMais[id].style.display = 'none'
     $btnMostrarMenos[id].style.display = 'block'
 }
-        
+
+
 function mostrarMenos(id) {
-    const classe = classeDoItem(id)
-    document.querySelector(`.${classe}`).classList.toggle('exibir')
-    document.querySelector(`.${classe}`).style.height = '0'
+    const $itensEscondidos = document.querySelectorAll('.itensEscondidos')[id]
+    $itensEscondidos.classList.toggle('exibir')
+    $itensEscondidos.style.height = '0'
 
     $btnMostrarMais[id].style.display = 'block'
     $btnMostrarMenos[id].style.display = 'none'
 }
 
+
+function addDescricao_BtnMostrarMais(botao) {
+    const $botaoParent_section = botao.parentNode.parentNode.getAttribute("class")
+    const nomeClasseItem = `.${$botaoParent_section}__conteudo`
+    const $itens = document.querySelectorAll(`${nomeClasseItem}`)
+    const $tituloCard_curriculo = document.querySelector(`.curriculo__cardTitulo:has(~ .${$botaoParent_section})`)
+
+    let qtdDeItens = $itens.length
+    let cardTitulo = $tituloCard_curriculo.textContent
+
+    if (qtdDeItens > QTD_ITENSDESTAQUE) {
+        botao.style.display = 'block'
+
+        botao.innerHTML = `
+        Exibir todos os ${qtdDeItens} itens de ${cardTitulo} <i class="fa-solid fa-arrow-down-short-wide"></i>`
+    }
+}
+
+
+function carregar_botoes() {
+    $btnMostrarMais.forEach((botao, i) => {
+        addDescricao_BtnMostrarMais(botao, i)
+        botao.addEventListener('click', () => mostrarMais(i))
+    })
+
+    $btnMostrarMenos.forEach((botao, i) => botao.addEventListener('click', () => mostrarMenos(i)))
+}
+
+
 const $btnMostrarMais = document.querySelectorAll('#btnMostrarMais')
 const $btnMostrarMenos = document.querySelectorAll('#btnMostrarMenos')
 
-const $formacaoAcademica = document.querySelectorAll('.formacaoAcademica__conteudo')
-const $licencasECertificados = document.querySelectorAll('.licencasECertificados__conteudo')
-const $numeroDeItensFormacaoAcademica = numeroDeElementos($formacaoAcademica)
-const $numeroDeItenslicencasECertificados = numeroDeElementos($licencasECertificados)
+window.addEventListener("resize", debounce(() => { 
+    $btnMostrarMenos.forEach((botao, i) => {
+        if (botao.style.display == 'block') {
+            mostrarMenos(i)
+            mostrarMais(i)
+        }
+    })
+}))
 
-$btnMostrarMais[0].innerHTML = `
-    Exibir todos os ${$numeroDeItensFormacaoAcademica} itens de formação acadêmica <i class="fa-solid fa-arrow-down-short-wide"></i>`
-
-$btnMostrarMais[1].innerHTML = `
-    Exibir todos os ${$numeroDeItenslicencasECertificados} itens de licencas e certificados <i class="fa-solid fa-arrow-down-short-wide"></i>`
-
-
-$btnMostrarMais.forEach((botao, i) => {
-    botao.addEventListener('click', () => mostrarMais(i))
-})
-
-$btnMostrarMenos.forEach((botao, i) => {
-    botao.style.display = 'none'
-    botao.addEventListener('click', () => mostrarMenos(i))
-})
+setTimeout(() => {
+    carregar_botoes()
+}, 500)
