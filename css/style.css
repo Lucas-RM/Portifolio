@@ -9,6 +9,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+  
+:target {
+    scroll-margin-top: .8em;
+}
+
 body {
     font-family: Lato;
     color: #000000;
@@ -82,3 +90,4 @@ body {
         transform: translate(0, -100%)
     }
 }
+
