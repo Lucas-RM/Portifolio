@@ -28,40 +28,28 @@
             </h1>
 
             <nav class="menu" role="menu">
-                <div class="cabecalhoPrincipal__botao">
+                <div class="menu__botao">
                     <button id="btnMobileMenu" aria-haspopup="true" aria-controls="menu__lista" aria-expanded="false">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
 
-                <ul class="menu__lista">
-                    <li class="menu__item">
-                        <a class="menu__link" href="index.html">home</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" id="linkSobreMim" href="#">sobre mim</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="curriculo.html">currículo</a>
-                    </li>
-                    <li class="menu__item">
-                        <span class="menu__spanContato">
-                            contato
-
-                            <div class="contatos__cabecalho">
-                                <a class="contatos__link" href="https://github.com/Lucas-RM" title="GitHub" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a class="contatos__link" href="https://www.linkedin.com/in/lucas-marcondes01" title="Linkedin" target="_blank">
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-                                <a class="contatos__link" href="mailto:lucas.marcondes36@gmail.com?subject='subject text'" title="Email" target="_blank">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </a>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
+                <div class="menu__container">
+                    <ul class="menu__lista">
+                        <li class="menu__item">
+                            <a class="menu__link" href="index.html">home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" id="linkSobreMim" href="#">sobre mim</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="curriculo.html">currículo</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" id="contatos" href="#contatos_ancora">contatos</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -83,7 +71,7 @@
                     <p class="sobreMim__paragrafo-destaque">Olá a todos,</p>
 
                     <p class="sobreMim__descricao">
-                        Meu nome é <strong>Lucas Rodrigues Marcondes</strong>, tenho 20 anos e desde cedo descobri minha paixão pela tecnologia. Minha jornada começou na infância, quando me envolvi com a área de TI através do <b><a href="https://ceappedreira.org.br/" target="_blank">CEAP (Centro Educacional Assistêncial Profissionalizante)</a></b>, uma Ong onde tive a oportunidade de explorar e aprender sobre diversas áreas da computação. Ao longo de seis anos, entre 2015 e 2020, realizei diversos cursos nessa instituição, culminando em um curso técnico de Informática nos últimos dois anos. Foi nesse período que tive meu primeiro contato efetivo com programação, o que solidificou minha decisão de seguir carreira na área de TI.
+                        Meu nome é <strong>Lucas Rodrigues Marcondes</strong>, tenho <span id="idade">20 anos</span> e desde cedo descobri minha paixão pela tecnologia. Minha jornada começou na infância, quando me envolvi com a área de TI através do <b><a href="https://ceappedreira.org.br/" target="_blank">CEAP (Centro Educacional Assistêncial Profissionalizante)</a></b>, uma Ong onde tive a oportunidade de explorar e aprender sobre diversas áreas da computação. Ao longo de seis anos, entre 2015 e 2020, realizei diversos cursos nessa instituição, culminando em um curso técnico de Informática nos últimos dois anos. Foi nesse período que tive meu primeiro contato efetivo com programação, o que solidificou minha decisão de seguir carreira na área de TI.
                     </p>
 
                     <p class="sobreMim__descricao">
@@ -122,12 +110,27 @@
 
     <!-- RODAPÉ -->
     <footer class="rodapePrincipal">
-        <p>&copy; Copyright 2024 Lucas Rodrigues Marcondes | Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; Copyright <span id="anoAtual">2024</span> Lucas Rodrigues Marcondes | Todos os direitos reservados.</p>
+
+            <div class="contatos__cabecalho" id="contatos_ancora">
+                <a class="contatos__link contato-github" href="https://github.com/Lucas-RM" title="GitHub" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a class="contatos__link contato-linkedin" href="https://www.linkedin.com/in/lucas-marcondes01" title="Linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a class="contatos__link contato-email" href="mailto:lucas.marcondes36@gmail.com?subject='subject text'" title="Email" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
     </footer>
 
-    <script src="script/main.js"></script>
+    <script src="script/calculaIdade.js"></script>
+    <script src="script/debouncing.js"></script>
     <script src="script/dadosDosProjetos.js"></script>
     <script src="script/adicionar-projeto.js"></script>
-    <script src="script/calculaIdade.js"></script>
+    <script src="script/main.js"></script>
 </body>
 </html>
