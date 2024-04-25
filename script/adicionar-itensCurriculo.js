@@ -66,7 +66,7 @@ const $itens = document.querySelectorAll('#itens')
 $itens.forEach((data) => {
     const nomeClasseItem = data.parentNode.getAttribute("class")
     
-    fetch(`./script/dados${nomeClasseItem}.js`)
+    fetch(`./script/dados_${nomeClasseItem}.js`)
     .then(res => res.text())
     .then(res => {
         res = JSON.parse(res)
