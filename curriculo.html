@@ -28,40 +28,28 @@
             </h1>
 
             <nav class="menu" role="menu">
-                <div class="cabecalhoPrincipal__botao">
+                <div class="menu__botao">
                     <button id="btnMobileMenu" aria-haspopup="true" aria-controls="menu__lista" aria-expanded="false">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
 
-                <ul class="menu__lista">
-                    <li class="menu__item">
-                        <a class="menu__link" href="index.html">home</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" id="linkSobreMim" href="#">sobre mim</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="curriculo.html">currículo</a>
-                    </li>
-                    <li class="menu__item">
-                        <span class="menu__spanContato">
-                            contato
-
-                            <div class="contatos__cabecalho">
-                                <a class="contatos__link" href="https://github.com/Lucas-RM" title="GitHub" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a class="contatos__link" href="https://www.linkedin.com/in/lucas-marcondes01" title="Linkedin" target="_blank">
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-                                <a class="contatos__link" href="mailto:lucas.marcondes36@gmail.com?subject='subject text'" title="Email" target="_blank">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </a>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
+                <div class="menu__container">
+                    <ul class="menu__lista">
+                        <li class="menu__item">
+                            <a class="menu__link" href="index.html">home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" id="linkSobreMim" href="#">sobre mim</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="curriculo.html">currículo</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" id="contatos" href="#contatos_ancora">contatos</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -116,45 +104,47 @@
             <section class="curriculo">
                 <h2 class="subtitulo">Currículo</h2>
                 <div class="container">
-                    <!-- Dados Gerais -->
-                    <div class="curriculo__card card__infoGeral">
-                        <h3 class="curriculo__cardTitulo">informações gerais</h3>
-                        <section class="dadosGerais">
-                            <table class="dadosGerais__corpo">
-                                <tr class="dadosGerais__cabecalho">
-                                    <td class="curriculo__cardSubtitulo">nome completo</td>
-                                    <td class="dadosGerais__paragrafo">lucas rodrigues marcondes</td>
-                                </tr>
-                                <tr class="dadosGerais__cabecalho">
-                                    <td class="curriculo__cardSubtitulo">idade</td>
-                                    <td class="dadosGerais__paragrafo" id="idade">20 anos</td>
-                                </tr>
-                                <tr class="dadosGerais__cabecalho">
-                                    <td class="curriculo__cardSubtitulo">localidade</td>
-                                    <td class="dadosGerais__paragrafo">são Paulo, brasil</td>
-                                </tr>
-                                <tr class="dadosGerais__cabecalho">
-                                    <td class="curriculo__cardSubtitulo">email</td>
-                                    <td class="dadosGerais__paragrafo">
-                                        <a href="mailto:lucas.marcondes36@gmail.com?subject='subject text'" target="_blank">lucas.marcondes36@gmail.com</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </section>
-                    </div>
-                    
-                    <!-- Objetivo -->
-                    <div class="curriculo__card">
-                        <h3 class="curriculo__cardTitulo">Objetivo</h3>
-                        <section class="objetivo">
-                            <p class="objetivo__paragrafo">
-                                Meu objetivo é me especializar como <b>Desenvolvedor Back-End</b>. Neste momento, estou buscando oportunidades de <b><u>estágio</u></b> para aprimorar minhas habilidades e contribuir com projetos inovadores, demonstrando meu compromisso com o aprendizado contínuo e crescimento profissional para alcançar essa especialização. 
-                            </p>
+                    <div class="curriculo__flexBox">
+                        <!-- Dados Gerais -->
+                        <div class="curriculo__card card__infoGeral">
+                            <h3 class="curriculo__cardTitulo">informações gerais</h3>
+                            <section class="dadosGerais">
+                                <table class="dadosGerais__corpo">
+                                    <tr class="dadosGerais__cabecalho">
+                                        <td class="curriculo__cardSubtitulo">nome completo</td>
+                                        <td class="dadosGerais__paragrafo">lucas rodrigues marcondes</td>
+                                    </tr>
+                                    <tr class="dadosGerais__cabecalho">
+                                        <td class="curriculo__cardSubtitulo">idade</td>
+                                        <td class="dadosGerais__paragrafo" id="idade">20 anos</td>
+                                    </tr>
+                                    <tr class="dadosGerais__cabecalho">
+                                        <td class="curriculo__cardSubtitulo">localidade</td>
+                                        <td class="dadosGerais__paragrafo">são Paulo, brasil</td>
+                                    </tr>
+                                    <tr class="dadosGerais__cabecalho">
+                                        <td class="curriculo__cardSubtitulo">email</td>
+                                        <td class="dadosGerais__paragrafo">
+                                            <a href="mailto:lucas.marcondes36@gmail.com?subject='subject text'" target="_blank">lucas.marcondes36@gmail.com</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </section>
+                        </div>
+                        
+                        <!-- Objetivo -->
+                        <div class="curriculo__card">
+                            <h3 class="curriculo__cardTitulo">Objetivo</h3>
+                            <section class="objetivo">
+                                <p class="objetivo__paragrafo">
+                                    Meu objetivo é me especializar como <b>Desenvolvedor Back-End</b>. Neste momento, estou buscando oportunidades de <b><u>estágio</u></b> para aprimorar minhas habilidades e contribuir com projetos inovadores, demonstrando meu compromisso com o aprendizado contínuo e crescimento profissional para alcançar essa especialização. 
+                                </p>
 
-                            <p class="objetivo__paragrafo">
-                                Estou aberto a oportunidades onde possa atuar de forma abrangente, tanto no desenvolvimento Back-End quanto no Front-End, como <b>Desenvolvedor Full Stack</b>, caso a necessidade surja ou se encaixe com meus objetivos profissionais a longo prazo. 
-                            </p>
-                        </section>
+                                <p class="objetivo__paragrafo">
+                                    Estou aberto a oportunidades onde possa atuar de forma abrangente, tanto no desenvolvimento Back-End quanto no Front-End, como <b>Desenvolvedor Full Stack</b>, caso a necessidade surja ou se encaixe com meus objetivos profissionais a longo prazo. 
+                                </p>
+                            </section>
+                        </div>
                     </div>
 
                     <!-- Habilidades -->
@@ -200,18 +190,34 @@
                         </section>
                     </div>
 
-                    <!-- Formacao Acadâmica -->
+                    <!-- Experiência -->
                     <div class="curriculo__card">
-                        <h3 class="curriculo__cardTitulo">formação acadêmica</h3>
-                        <section class="formacaoAcademica">
-                            <div class="formacaoAcademica__corpo">
+                        <h3 class="curriculo__cardTitulo">experiência</h3>
+                        <section class="experiencia">
+                            <div class="experiencia__corpo" id="itens">
                                 <div class="itensDestaques"></div>
-                                <div class="exibirItens itensFormacaoAcademica"></div>
+                                <div class="exibirItens itensEscondidos"></div>
                             </div>
 
                             <div class="divBtnItens">
                                 <button class="btnItens" id="btnMostrarMais"></button>
-                                <button class="btnItens" id="btnMostrarMenos">Mostrar menos <i class="fa-solid fa-arrow-up-short-wide"></i></button>
+                                <button class="btnItens" id="btnMostrarMenos" name="btnMostrarMenos_experiencia">Mostrar menos <i class="fa-solid fa-arrow-up-short-wide"></i></button>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Formacao Acadâmica -->
+                    <div class="curriculo__card">
+                        <h3 class="curriculo__cardTitulo">formação acadêmica</h3>
+                        <section class="formacaoAcademica">
+                            <div class="formacaoAcademica__corpo" id="itens">
+                                <div class="itensDestaques"></div>
+                                <div class="exibirItens itensEscondidos"></div>
+                            </div>
+
+                            <div class="divBtnItens">
+                                <button class="btnItens" id="btnMostrarMais"></button>
+                                <button class="btnItens" id="btnMostrarMenos" name="btnMostrarMenos_formacaoAcademica">Mostrar menos <i class="fa-solid fa-arrow-up-short-wide"></i></button>
                             </div>
                         </section>
                     </div>
@@ -220,14 +226,14 @@
                     <div class="curriculo__card">
                         <h3 class="curriculo__cardTitulo">licenças & certificados</h3>
                         <section class="licencasECertificados">
-                            <div class="licencasECertificados__corpo">
+                            <div class="licencasECertificados__corpo" id="itens">
                                 <div class="itensDestaques"></div>
-                                <div class="exibirItens itensLicencasECertificados"></div>
+                                <div class="exibirItens itensEscondidos"></div>
                             </div>
 
                             <div class="divBtnItens">
                                 <button class="btnItens" id="btnMostrarMais"></button>
-                                <button class="btnItens" id="btnMostrarMenos">Mostrar menos <i class="fa-solid fa-arrow-up-short-wide"></i></button>
+                                <button class="btnItens" id="btnMostrarMenos" name="btnMostrarMenos_licencasECertificados">Mostrar menos <i class="fa-solid fa-arrow-up-short-wide"></i></button>
                             </div>
                         </section>
                     </div>
@@ -238,14 +244,28 @@
 
     <!-- RODAPÉ -->
     <footer class="rodapePrincipal">
-        <p>&copy; Copyright 2024 Lucas Rodrigues Marcondes | Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; Copyright <span id="anoAtual">2024</span> Lucas Rodrigues Marcondes | Todos os direitos reservados.</p>
+
+            <div class="contatos__cabecalho" id="contatos_ancora">
+                <a class="contatos__link contato-github" href="https://github.com/Lucas-RM" title="GitHub" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a class="contatos__link contato-linkedin" href="https://www.linkedin.com/in/lucas-marcondes01" title="Linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a class="contatos__link contato-email" href="mailto:lucas.marcondes36@gmail.com?subject='subject text'" title="Email" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
     </footer>
 
-    <script src="script/main.js"></script>
-    <script src="script/dadosFormacaoAcademica.js"></script>
-    <script src="script/dadosLicencasECertificados.js"></script>
+    <script src="script/calculaIdade.js"></script>
+    <script src="script/debouncing.js"></script>
+    <script src="script/itensConteudo-curriculo_html.js"></script>
     <script src="script/adicionar-itensCurriculo.js"></script>
     <script src="script/curriculo.js"></script>
-    <script src="script/calculaIdade.js"></script>
+    <script src="script/main.js"></script>
 </body>
 </html>
