@@ -31,6 +31,7 @@
 
 .menu__lista {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 
     font-family: 'FoundersGrotesk';
@@ -43,12 +44,15 @@
     position: relative;
 }
 
-.menu__item > .menu__link:hover,
-.menu__item .menu__spanContato:hover {
-        color: rgb(204, 135, 71);
+.menu__link {
+    transition: .3s color;
 }
 
-.menu__item:nth-child(-n + 3) > .menu__link:hover::after {
+.menu__link:hover {
+    color: rgb(204, 135, 71);
+}
+
+.menu__link:hover::after {
     content: "";
 
     width: 100%;
@@ -57,38 +61,6 @@
     position: absolute;
     left: 0;
     top: 25px;
-}
 
-.menu__spanContato {
-    cursor: pointer;
-}
-
-.contatos__cabecalho {
-    display: none;
-    cursor: default;
-}
-
-.menu__spanContato:hover .contatos__cabecalho {
-    display: flex;
-    justify-content: space-between;
-    width: 115px;
-    
-    padding: 10px;
-
-    background-color: rgba(17, 17, 17, 0.965);
-    border-radius: 5px;
-    animation: fadeIn 300ms linear;
-}
-
-.contatos__cabecalho .contatos__link {
-    font-size: 25px;
-    color: white;
-
-    border: none;
-
-    transition: 300ms;
-}
-
-.contatos__cabecalho .contatos__link:hover {
-    color: #11bafd;
+    background-color: rgb(44, 99, 228);
 }
