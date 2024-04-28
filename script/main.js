@@ -83,9 +83,7 @@ window.addEventListener("resize", debounce(() => {
 
     if($mobileMenu.children[0].classList.contains('fa-xmark')) toggleMenu($mobileMenu)
     
-    console.log($mobileMenu.getAttribute('aria-expanded'))
     if (innerWidth >= 992) {
-        console.log("oi")
         $menu__container.style.height = 'auto'
         $menu__container.style.top = 0
     } else {
