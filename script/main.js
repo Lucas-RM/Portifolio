@@ -1,7 +1,8 @@
 function mudaTitle(title) {document.title = title}
 
 function toggleMenu(event) {
-    if (event != undefined && event.type === 'touchstart') event.preventDefault()
+    if (event.type === 'touchstart' || event.type === 'click') event.preventDefault()
+    
     const $menu = document.querySelector('.menu')
     const $icone = document.querySelector('.fas')
 
@@ -10,12 +11,21 @@ function toggleMenu(event) {
     $icone.classList.toggle('fa-xmark')
 
     const $active = $menu.classList.contains('active')
-    if (event != undefined) event.currentTarget.setAttribute('aria-expanded', $active)
+    if (event.type === 'touchstart' || event.type === 'click') event.currentTarget.setAttribute('aria-expanded', $active)
+    else event.setAttribute('aria-expanded', $active)
 
-    if ($active) {
+    const $menu__container_active = document.querySelector('.menu.active .menu__container')
+
+    if ($active) {        
         document.documentElement.style.overflow = 'hidden'
+
+        let altura_menu__container = parseFloat($cabecalhoPrincipal.offsetHeight)
+        $menu__container_active.style.height = `calc(100vh - ${altura_menu__container}px)`
+
+        $menu__container.style.top = getComputedStyle($cabecalhoPrincipal).height
     } else {
         document.documentElement.style.overflow = 'auto'
+        $menu__container.style.height = 0
     }
 }
 
@@ -45,6 +55,8 @@ function atualizarAnoRodape() {
 }
 
 const $pageScroll = document.documentElement
+const $cabecalhoPrincipal = document.querySelector('.cabecalhoPrincipal')
+const $menu__container = document.querySelector('.menu__container')
 const $visible = document.querySelector('.visible')
 const $fundoDesfocado = document.querySelector('.fundoDesfocado')
 const $linkSobreMim = document.querySelector('#linkSobreMim')
@@ -54,16 +66,31 @@ const $mobileMenu = document.querySelector('#btnMobileMenu')
 const $contatos = document.querySelector('#contatos')
 let pageTitle = document.title
 
+if (parseFloat($cabecalhoPrincipal.offsetHeight) > 75) {
+    $menu__container.style.top = parseFloat($cabecalhoPrincipal.offsetHeight) + 'px'
+}
+
 $mobileMenu.addEventListener('click', toggleMenu)
-$contatos.addEventListener('click', (event) => { 
-    if($mobileMenu.children[0].classList.contains('fa-xmark')) toggleMenu(event)
+$contatos.addEventListener('click', () => { 
+    if($mobileMenu.children[0].classList.contains('fa-xmark')) toggleMenu($mobileMenu)
 })
 
 $linkSobreMim.addEventListener('click', sobreMim)
 $botaoFechar.addEventListener('click', botaoFechar)
 
 window.addEventListener("resize", debounce(() => {
-    if($mobileMenu.children[0].classList.contains('fa-xmark')) toggleMenu()
+    $menu__container.style.top = parseFloat($cabecalhoPrincipal.offsetHeight) + 'px'
+
+    if($mobileMenu.children[0].classList.contains('fa-xmark')) toggleMenu($mobileMenu)
+    
+    console.log($mobileMenu.getAttribute('aria-expanded'))
+    if (innerWidth >= 992) {
+        console.log("oi")
+        $menu__container.style.height = 'auto'
+        $menu__container.style.top = 0
+    } else {
+        $menu__container.style.height = 0
+    }
 }))
 
 atualizarAnoRodape()
