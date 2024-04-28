@@ -3,9 +3,9 @@ const htmlItens = (dados, i) => [{
             <hr>
             <div class="formacaoAcademica__conteudo item">
                 <img class="imgItem" src="${dados[i].img}">
-                <div class="formacaoAcademica__cabecalho">
-                    <span class="formacaoAcademica__info">
-                        <h4 class="curriculo__cardSubtitulo">${dados[i].titulo}</h4>
+                <div class="formacaoAcademica__cabecalho cabecalho__container">
+                    <span class="formacaoAcademica__info cabecalho__info">
+                        <h4 class="card__subtitulo">${dados[i].titulo}</h4>
                     </span>
         
                     <div class="description"></div>
@@ -17,12 +17,12 @@ const htmlItens = (dados, i) => [{
             <hr>
             <div class="licencasECertificados__conteudo item">
                 <img  class="imgItem" src="${dados[i].img}">
-                <div class="licencasECertificados__cabecalho">
-                    <span class="licencasECertificados__info">
-                        <h4 class="curriculo__cardSubtitulo">${dados[i].titulo}</h4>
+                <div class="licencasECertificados__cabecalho cabecalho__container">
+                    <span class="licencasECertificados__info cabecalho__info">
+                        <h4 class="card__subtitulo">${dados[i].titulo}</h4>
                     </span>
                     
-                    <div class="divLinkCertificado">
+                    <div class="linkCertificado__container">
                         <a class="linkCertificado" id="linkCertificado" href="${dados[i].link}" target="_blank">Certificado</a>
                     </div>
                 </div>
@@ -33,9 +33,9 @@ const htmlItens = (dados, i) => [{
             <hr>
             <div class="experiencia__conteudo item">
                 <img class="imgItem" src="${dados[i].img}">
-                <div class="experiencia__cabecalho">
-                    <span class="experiencia__info">
-                        <h4 class="curriculo__cardSubtitulo">${dados[i].titulo}</h4>
+                <div class="experiencia__cabecalho cabecalho__container">
+                    <span class="experiencia__info cabecalho__info">
+                        <h4 class="card__subtitulo">${dados[i].titulo}</h4>
                     </span>
 
                     <div class="experiencia__cargos"></div>

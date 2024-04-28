@@ -38,7 +38,7 @@ function addDescricao_BtnMostrarMais(botao) {
     const $botaoParent_section = botao.parentNode.parentNode.getAttribute("class")
     const nomeClasseItem = `.${$botaoParent_section}__conteudo`
     const $itens = document.querySelectorAll(`${nomeClasseItem}`)
-    const $tituloCard_curriculo = document.querySelector(`.curriculo__cardTitulo:has(~ .${$botaoParent_section})`)
+    const $tituloCard_curriculo = document.querySelector(`.card__titulo:has(~ .${$botaoParent_section})`)
 
     let qtdDeItens = $itens.length
     let cardTitulo = $tituloCard_curriculo.textContent

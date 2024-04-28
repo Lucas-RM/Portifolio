@@ -21,7 +21,7 @@
 }
 
 .sobreMim .container {
-    max-width: 85%;
+    max-width: 90%;
     height: 100vh;
 
     position: relative;
@@ -73,12 +73,14 @@
 .sobreMim__cabecalho {
     position: relative;
 
+    max-height: 80vh;
+
     background-color: rgba(26, 26, 26, 0.965);
     border-radius: 12px;
 }
 
 .sobreMim__artigo {
-    max-height: 82vh;
+    max-height: 80vh;
 
     padding: 20px;
 
