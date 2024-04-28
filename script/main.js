@@ -71,11 +71,16 @@ if (parseFloat($cabecalhoPrincipal.offsetHeight) > 75) {
 }
 
 $mobileMenu.addEventListener('click', toggleMenu)
+
 $contatos.addEventListener('click', () => { 
     if($mobileMenu.children[0].classList.contains('fa-xmark')) toggleMenu($mobileMenu)
 })
 
-$linkSobreMim.addEventListener('click', sobreMim)
+$linkSobreMim.addEventListener('click', () => { 
+    toggleMenu($mobileMenu)
+    sobreMim()
+})
+
 $botaoFechar.addEventListener('click', botaoFechar)
 
 window.addEventListener("resize", debounce(() => {
