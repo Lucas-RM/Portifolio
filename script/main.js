@@ -23,6 +23,7 @@ function toggleMenu(event) {
         $menu__container_active.style.height = `calc(100vh - ${altura_menu__container}px)`
 
         $menu__container.style.top = getComputedStyle($cabecalhoPrincipal).height
+            
     } else {
         document.documentElement.style.overflow = 'auto'
         $menu__container.style.height = 0
@@ -73,11 +74,12 @@ if (parseFloat($cabecalhoPrincipal.offsetHeight) > 75) {
 $mobileMenu.addEventListener('click', toggleMenu)
 
 $contatos.addEventListener('click', () => { 
-    if($mobileMenu.children[0].classList.contains('fa-xmark')) toggleMenu($mobileMenu)
+    if ($mobileMenu.getAttribute('aria-expanded') === 'true') toggleMenu($mobileMenu)
 })
 
-$linkSobreMim.addEventListener('click', () => { 
-    toggleMenu($mobileMenu)
+$linkSobreMim.addEventListener('click', () => {     
+    if ($mobileMenu.getAttribute('aria-expanded') === 'true') toggleMenu($mobileMenu)
+
     sobreMim()
 })
 
@@ -86,7 +88,7 @@ $botaoFechar.addEventListener('click', botaoFechar)
 window.addEventListener("resize", debounce(() => {
     $menu__container.style.top = parseFloat($cabecalhoPrincipal.offsetHeight) + 'px'
 
-    if($mobileMenu.children[0].classList.contains('fa-xmark')) toggleMenu($mobileMenu)
+    if ($mobileMenu.getAttribute('aria-expanded') === 'true') toggleMenu($mobileMenu)
     
     if (innerWidth >= 992) {
         $menu__container.style.height = 'auto'
