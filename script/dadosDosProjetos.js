@@ -37,7 +37,7 @@ const projetos = [
     },
     {
         link: 'https://lucas-rm.github.io/pesquisa_inclusao_digital/',
-        img: './img/projetos/Projeto-InclusaoDigital.jpg',
+        img: './img/projetos/projeto-inclusaoDigital.jpg',
         titulo: 'projeto inclusão digital',
         descricao: 'Projeto acadêmico realizado em grupo na faculdade com a finalidade de compreender o processo de <b>Inclusão Digital</b> na sociedade.'
     },
@@ -49,7 +49,7 @@ const projetos = [
     },
     {
         link: 'https://lucas-rm.github.io/relogio-online/',
-        img: './img/projetos/Projeto-Relogio.jpg',
+        img: './img/projetos/projeto-relogio.jpg',
         titulo: 'projeto relógio',
         descricao: 'Projeto com intuito de representar um relógio em um site.'
     },
@@ -73,7 +73,7 @@ const projetos = [
     },
     {
         link: 'https://lucas-rm.github.io/Projeto-Huddle/',
-        img: './img/projetos/Projeto-Huddle.jpg',
+        img: './img/projetos/projeto-huddle.jpg',
         titulo: 'projeto huddle',
         descricao: 'Projeto acadêmico feito em curso com objetivo de aplicar <b>posicionamento do conteúdo</b> do site e deixar o site <b>responsivo</b>, sendo compatível para celular, computador, iPads, entre outros dispositivos.'
     },
