@@ -1,6 +1,6 @@
 [
     {
-        "img": "https://media.licdn.com/dms/image/D4E0BAQEWNDeUOTnZlg/company-logo_200_200/0/1682344717420/unip_logo?e=1721260800&v=beta&t=tgPi8hsv8vJf6eT_KZt0TjBnQO0OrlHcm9erKvmTd0s",
+        "img": "../img/curriculo/unip-logo.jpg",
         "titulo": "universidade paulista",
         "paragrafo": [
             "Bacharelado, Ciência da Computação",
@@ -9,7 +9,7 @@
         "descricao": []
     },
     {
-        "img": "https://static-exp2.licdn.com/sc/h/8zzzkhxduv0r11cuxbs48pg03",
+        "img": "../img/curriculo/padrao-logo-itensCurriculo.jpg",
         "titulo": "escola estadual professor eusébio <span>de</span> paula marcondes",
         "paragrafo": [
             "Ensino Médio",
@@ -20,7 +20,7 @@
         ]
     },
     {
-        "img": "https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ",
+        "img": "../img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Samsung Innovation Campus • 1 ano, Programação",
@@ -33,7 +33,7 @@
         ]
     },
     {
-        "img": "https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ",
+        "img": "../img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Técnico em Informática • 2 anos",
@@ -45,7 +45,7 @@
         ]
     },
     {
-        "img": "https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ",
+        "img": "../img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Informática Aplicada • 1 ano",
@@ -57,7 +57,7 @@
         ]
     },
     {
-        "img": "https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ",
+        "img": "../img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Informática Básica • 1 ano",
@@ -69,7 +69,7 @@
         ]
     },
     {
-        "img": "https://media.licdn.com/dms/image/C4E0BAQFB2gc7ymRxYQ/company-logo_100_100/0/1637066343644/ceappedreira_logo?e=1721260800&v=beta&t=OgPeqDe4e9h8F0w8IQICt2ttP1bXhE7cnGqNbuWyDEQ",
+        "img": "../img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Eletricidade Industrial • 1 ano",

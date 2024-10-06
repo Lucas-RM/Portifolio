@@ -175,6 +175,10 @@
     margin: 0.6em 0 0;
 }
 
+.description b {
+    font-weight: bold;
+}
+
 .experiencia__cargos {
     display: flex;
     flex-wrap: wrap;

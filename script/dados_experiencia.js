@@ -1,6 +1,6 @@
 [
     {
-        "img": "https://media.licdn.com/dms/image/C4D0BAQFto4Qo1rCVhg/company-logo_100_100/0/1656687748687/sinqia_logo?e=1721865600&v=beta&t=TOkYQUR6tHt9iAmwV9CkKvAaxqOL4NNwEioUo2Sthrc",
+        "img": "../img/curriculo/sinqia-logo.jpg",
         "titulo": "sinqia",
         "paragrafo": [
             "Tempo integral • 1 ano e 6 meses",
@@ -11,10 +11,12 @@
             "Auxiliar Dev II"
         ],
         "descricao": [
-            "Atuação nas principais soluções voltadas a Previdência Privada Complementar tanto em manutenções quanto em evoluções de software.<br>",
-            "- Desenvolvimento de projetos utilizando: C#; .NET Core; ASP.NET MVC; HTML/CSS; Angular; JavaScript; Entity Framework Core; e SQL Server.",
-            "- Desenvolvimento de projetos;",
-            "- Metodologias ágeis como SCRUM e Kanban."
+            "Atuação nas principais soluções voltadas a <b>Previdência Privada Complementar</b> tanto em manutenções quanto em evoluções de software.<br><br>",
+            "- Colaborou com equipes multifuncionais para desenvolver e implantar soluções financeiras de alta qualidade, acomodando legislação em rápida mudança para mais de 200.000 usuários divididos entre mais de 100 empresas clientes.",
+            "- Atuação no time de Engenharia N2, efetuando melhorias e correções/manutenções os projetos de mais de 27 clientes.",
+            "- Desenvolvimento de integrações com plataformas como TFS/Azure DevOps e Jira.",
+            "- Metodologias ágeis como Scrum e Kanban.<br><br>",
+            "<b>Tecnologias:</b> C# | .NET Core | ASP.NET MVC | HTML/CSS | Angular | JavaScript | Entity Framework Core | GIT | SQL | SQL Server."
         ]
     }
 ]
