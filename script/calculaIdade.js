@@ -17,8 +17,11 @@ function calculaIdade(ano_aniversario, mes_aniversario, dia_aniversario) {
     return idade < 0 ? 0 : idade
 }
 
-const $tag_idade = document.querySelector('#idade')
+const $tag_idade = document.querySelectorAll('#idade')
 
 const idade = calculaIdade(2003, 9, 30)
 
-$tag_idade.innerHTML = idade + " anos"
+$tag_idade.forEach(element => {
+    element.innerHTML = idade + " anos"
+})
+
