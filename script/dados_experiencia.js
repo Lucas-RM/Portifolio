@@ -1,6 +1,6 @@
 [
     {
-        "img": "../img/curriculo/sinqia-logo.jpg",
+        "img": "./img/curriculo/sinqia-logo.jpg",
         "titulo": "sinqia",
         "paragrafo": [
             "Tempo integral • 1 ano e 6 meses",

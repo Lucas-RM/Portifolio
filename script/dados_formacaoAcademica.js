@@ -1,6 +1,6 @@
 [
     {
-        "img": "../img/curriculo/unip-logo.jpg",
+        "img": "./img/curriculo/unip-logo.jpg",
         "titulo": "universidade paulista",
         "paragrafo": [
             "Bacharelado, Ciência da Computação",
@@ -9,7 +9,7 @@
         "descricao": []
     },
     {
-        "img": "../img/curriculo/padrao-logo-itensCurriculo.jpg",
+        "img": "./img/curriculo/padrao-logo-itensCurriculo.jpg",
         "titulo": "escola estadual professor eusébio <span>de</span> paula marcondes",
         "paragrafo": [
             "Ensino Médio",
@@ -20,7 +20,7 @@
         ]
     },
     {
-        "img": "../img/curriculo/ceapPedreira-logo.jpg",
+        "img": "./img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Samsung Innovation Campus • 1 ano, Programação",
@@ -33,7 +33,7 @@
         ]
     },
     {
-        "img": "../img/curriculo/ceapPedreira-logo.jpg",
+        "img": "./img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Técnico em Informática • 2 anos",
@@ -45,7 +45,7 @@
         ]
     },
     {
-        "img": "../img/curriculo/ceapPedreira-logo.jpg",
+        "img": "./img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Informática Aplicada • 1 ano",
@@ -57,7 +57,7 @@
         ]
     },
     {
-        "img": "../img/curriculo/ceapPedreira-logo.jpg",
+        "img": "./img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Informática Básica • 1 ano",
@@ -69,7 +69,7 @@
         ]
     },
     {
-        "img": "../img/curriculo/ceapPedreira-logo.jpg",
+        "img": "./img/curriculo/ceapPedreira-logo.jpg",
         "titulo": "CEAP - centro educacional assistencial profissionalizante",
         "paragrafo": [
             "Eletricidade Industrial • 1 ano",
