@@ -6,7 +6,7 @@ const projetos = [
         descricao: 'Este projeto, desenvolvido em <b>React</b>, utiliza a <b>API do GitHub</b> para permitir a <u>busca de perfis de usuários e seus respectivos repositórios</u>. A aplicação permite que os usuários insiram o nome de um perfil do GitHub e, ao realizar a busca, exibe na tela informações básicas do perfil, além de uma lista de repositórios públicos associados a esse usuário.'
     },
     {
-        link: 'https://lucas-rm.github.io/minimal-api/',
+        link: 'https://github.com/Lucas-RM/minimal-api/',
         img: './img/projetos/padrao-gitHub-logo.jpg',
         titulo: 'Minimal API',
         descricao: 'Neste desafio criei uma <b>API</b> utilizando a técnica de <b>Minimals APIs</b> para o <u>registro de veículos</u>, ampliando suas funcionalidades ao incorporar <u>administradores</u> com regras <b>JWT</b>. Ao explorar o funcionamento da API, familiarizarei com o uso do <b>Swagger</b>, além de trabalhar com testes, garantindo a robustez e confiabilidade do sistema que desenvolvi.'
