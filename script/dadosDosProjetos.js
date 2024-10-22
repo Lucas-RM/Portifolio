@@ -12,10 +12,22 @@ const projetos = [
         descricao: 'Neste desafio criei uma <b>API</b> utilizando a técnica de <b>Minimals APIs</b> para o <u>registro de veículos</u>, ampliando suas funcionalidades ao incorporar <u>administradores</u> com regras <b>JWT</b>. Ao explorar o funcionamento da API, familiarizarei com o uso do <b>Swagger</b>, além de trabalhar com testes, garantindo a robustez e confiabilidade do sistema que desenvolvi.'
     },
     {
+        link: 'https://github.com/Lucas-RM/blog-pessoal-nextjs/',
+        img: './img/projetos/padrao-gitHub-logo.jpg',
+        titulo: 'blog pessoal',
+        descricao: 'Este Projeto, desenvolvido em <b>Next.js</b>, foi feito para criar um <b>Blog Pessoal</b> dinâmico e com um integração a um serviço de nuvem (<b>Supabase</b>).'
+    },
+    {
+        link: 'https://github.com/Lucas-RM/github-repos-wiki-react/',
+        img: './img/projetos/padrao-gitHub-logo.jpg',
+        titulo: 'gitHub repos wiki',
+        descricao: 'Neste Desafio de Projeto eu construí uma <b>Wiki</b> para <u>salvar alguns repositórios do GitHub</u>. Aprendi a como consumir a <b>API do GitHub</b> e como listar e remover repositórios de interesse.'
+    },
+    {
         link: 'https://github.com/Lucas-RM/trilha-net-api-desafio/',
         img: './img/projetos/padrao-gitHub-logo.jpg',
         titulo: 'gerenciador de tarefas',
-        descricao: 'Repositório criado para o desenvolvimento do desafio em que foi solicitado para construir um <b>Sistema Gerenciador de Tarefas</b>, onde eu poderia cadastrar uma lista de tarefas que permitiria organizar melhor a minha rotina. Essa lista de tarefas precisa ter um <b>CRUD</b> e a aplicação deverá ser do tipo Web API ou MVC. No caso, construí uma <b>Web API</b>.'
+        descricao: 'Repositório criado para o desenvolvimento do desafio em que foi solicitado para construir um <b>Sistema Gerenciador de Tarefas</b>, onde eu poderia cadastrar uma lista de tarefas que permitiria organizar melhor a minha rotina. Essa lista de tarefas precisava ter um <b>CRUD</b> e a aplicação deverá ser do tipo Web API ou MVC. No caso, construí uma <b>Web API</b>.'
     },
     {
         link: 'https://lucas-rm.github.io/agenda/',
@@ -24,10 +36,28 @@ const projetos = [
         descricao: 'O projeto <b>Agenda</b> é um site que as pessoas podem definir o ano, o mês, o dia e o horário de suas tarefas. Além disso, terá as funções de deletar e de marcar como concluído as tarefas finalizadas.'
     },
     {
+        link: 'https://github.com/Lucas-RM/clone-dio/',
+        img: './img/projetos/padrao-gitHub-logo.jpg',
+        titulo: 'clone DIO',
+        descricao: 'Este projeto é um <b>clone da plataforma DIO</b>, desenvolvido em <b>React</b> utilizando <u>styled-components</u> para a estilização de componentes. O objetivo é replicar a interface e funcionalidades principais da plataforma, proporcionando uma experiência prática no desenvolvimento de interfaces modernas e responsivas.'
+    },
+    {
+        link: 'https://github.com/Lucas-RM/tela-de-login-typescript-react/',
+        img: './img/projetos/padrao-gitHub-logo.jpg',
+        titulo: 'tela de login',
+        descricao: 'Este projeto foi implementado uma <b>Tela de Login</b> usando <b>TypeScript</b> contendo uma etapa de autenticação e validação dentro do <b>React</b>.'
+    },
+    {
         link: 'https://github.com/Lucas-RM/calculadora-react-desafio-dio/',
         img: './img/projetos/padrao-gitHub-logo.jpg',
         titulo: 'calculadora (react)',
         descricao: 'Projeto criado para solucionar o desafio de criar uma <b>Calculadora</b> utilizando a biblioteca <b>React</b> no curso feito na plataforma DIO.'
+    },
+    {
+        link: 'https://github.com/Lucas-RM/FileCrypto/',
+        img: './img/projetos/padrao-gitHub-logo.jpg',
+        titulo: 'file crypto',
+        descricao: 'Este projeto foi criado para implementar um programa em <b>Python</b> que realiza a <b>criptografia</b> e <b>descriptografia</b> de arquivos utilizando diferentes métodos de criptografia. As funcionalidades principais incluem: Criptografias de <b>CYPHER (Matriz)</b>, <b>RSA (Chave Pública e Privada)</b>, <b>ASCII</b> e <b>HEXADECIMAL</b>.'
     },
     {
         link: 'https://github.com/Lucas-RM/calculadora-testes-unitarios/',
@@ -40,6 +70,12 @@ const projetos = [
         img: './img/projetos/projeto-inclusaoDigital.jpg',
         titulo: 'projeto inclusão digital',
         descricao: 'Projeto acadêmico realizado em grupo na faculdade com a finalidade de compreender o processo de <b>Inclusão Digital</b> na sociedade.'
+    },
+    {
+        link: 'https://github.com/Lucas-RM/fundamentos-javascript/',
+        img: './img/projetos/padrao-gitHub-logo.jpg',
+        titulo: 'fundamentos javascript',
+        descricao: 'Repositório dedicado a <u>projetos, exemplos e exercícios em </u><b><u>JavaScript</u></b>. Aqui você encontrará códigos práticos, desde conceitos básicos até funcionalidades avançadas, para aprimorar o conhecimento nessa linguagem amplamente utilizada no desenvolvimento web.'
     },
     {
         link: 'https://github.com/Lucas-RM/Editor-de-Texto/',
